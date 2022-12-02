@@ -4,10 +4,68 @@
  */
 package Business.UserAccount;
 
+import Business.Employee.Emp;
+import Business.Role.Role;
+import Business.WorkQueue.WorkQueue;
+
 /**
  *
  * @author uddhavzambare
  */
+
 public class UserAccount {
+    private String username;
+    private String password;
+    private Emp emp;
+    private Role role;
+    private WorkQueue workQueue;
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public WorkQueue getWorkQueue() {
+        return workQueue;
+    }
+
+    public void setWorkQueue(WorkQueue workQueue) {
+        this.workQueue = workQueue;
+    }
     
+    public UserAccount() {
+        workQueue = new WorkQueue();
+    }
+    
+    @Override
+    public String toString() {
+        return username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Emp getEmp() {
+        return emp;
+    }
+
+    public void setEmp(Emp emp) {
+        this.emp = emp;
+    }
 }
