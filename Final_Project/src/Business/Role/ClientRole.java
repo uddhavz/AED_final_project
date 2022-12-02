@@ -8,10 +8,10 @@ package Business.Role;
  *
  * @author uddhavzambare
  */
-public class CustomerRole extends Role {
+public class ClientRole extends Role {
     
     @Override
     public String toString(){
-        return "Customer";
+        return "Client";
     }
 }
