@@ -17,7 +17,7 @@ public class VendorDirectory {
         vendorsArray = new ArrayList();
     }
 
-    public Vendor createVendorUnit(String name) {
+    public Vendor createVendor(String name) {
         for (Vendor vendorArray : vendorsArray) {
             if (vendorArray.getVendorName().equals(name)) {
                 return null;
