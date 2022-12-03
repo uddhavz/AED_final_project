@@ -6,7 +6,7 @@ package Business.Vendor;
 
 import Business.Order.Order;
 import Business.Organization.Organization;
-import Business.Products.ProductDirectory;
+import Business.Produce.ProduceDirectory;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -16,13 +16,13 @@ import java.util.ArrayList;
  */
 public class Vendor extends Organization {
     private String vendorName;
-    private ProductDirectory productDirectory;
+    private ProduceDirectory productDirectory;
     private ArrayList<Order> ordersArray;
 
     public Vendor(String name) {
         super();
         this.vendorName = name;
-        this.productDirectory = new ProductDirectory();
+        this.productDirectory = new ProduceDirectory();
         this.ordersArray = new ArrayList();
     }
 
@@ -35,7 +35,7 @@ public class Vendor extends Organization {
         this.vendorName = vendorName;
     }
     
-    public ProductDirectory getProductDirectory() {
+    public ProduceDirectory getProductDirectory() {
         return productDirectory;
     }
     

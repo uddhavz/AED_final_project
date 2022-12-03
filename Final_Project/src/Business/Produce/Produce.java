@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Business.Products;
+package Business.Produce;
 import Business.Client.Client;
 import Business.Vendor.Vendor;
 /**
  *
  * @author rajsarode
  */
-public class Product {
+public class Produce {
     private String prodName;
     private double price;
     private int quantity;
@@ -19,7 +19,7 @@ public class Product {
     
     private String status;
     
-    public Product(String prodName, double price, int quantity){
+    public Produce(String prodName, double price, int quantity){
         this.prodName = prodName;
         this.price = price;
         this.quantity = quantity;

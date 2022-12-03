@@ -6,7 +6,7 @@ package Business.County;
 
 import Business.Order.Order;
 import Business.Organization.Organization;
-import Business.Products.ProductDirectory;
+import Business.Produce.ProduceDirectory;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class County extends Organization{
     
     private String county;
-    private ProductDirectory productDirectory;
+    private ProduceDirectory productDirectory;
     private ArrayList<Order> ordersArray;
 
     public String getCounty() {
@@ -33,7 +33,7 @@ public class County extends Organization{
     public County(String county) {
         super();
         this.county = county;
-        this.productDirectory = new ProductDirectory();
+        this.productDirectory = new ProduceDirectory();
         this.ordersArray = new ArrayList();
     }
     
