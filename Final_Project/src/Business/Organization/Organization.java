@@ -30,6 +30,7 @@ public abstract class Organization {
         InventoryManager("Inventory Manager"), 
         DeliveryPerson("Delivery Person"), 
         Dietitian("Dietitian"),
+        ShippingManager("Shipping Manager"),
         Pathologist("Pathologist");
         
         private String value;
