@@ -4,10 +4,30 @@
  */
 package Business.Organization;
 
+import Business.Role.Role;
+import Business.Role.ShippingManagerRole;
+import java.util.ArrayList;
+
 /**
  *
  * @author rajsarode
  */
-public class ShippingOrganization {
+public class ShippingOrganization extends Organization {
+    private String orgType;
     
+    public ShippingOrganization(String orgType){
+        super(Organization.Type.ShippingManager.getValue());
+        this.orgType = orgType;
+    }
+
+    public String getOrganizationType() {
+        return orgType;
+    }
+    
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        ArrayList<Role> rolesArray = new ArrayList<>();
+        rolesArray.add(new ShippingManagerRole());
+        return rolesArray;
+    }
 }
