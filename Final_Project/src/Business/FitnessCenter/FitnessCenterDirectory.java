@@ -12,21 +12,40 @@ import java.util.ArrayList;
  */
 public class FitnessCenterDirectory {
     
-    private ArrayList<FitnessCenter> FitnessCentersArray;
+    private ArrayList<FitnessCenter> fitnessCentersArray;
     
     public FitnessCenterDirectory() {
-        this.FitnessCentersArray = new ArrayList();
+        this.fitnessCentersArray = new ArrayList();
     }
     
     public FitnessCenter createFitnessCenter(String name){
-        for (FitnessCenter FitnessCenterArray : FitnessCentersArray){
+        for (FitnessCenter FitnessCenterArray : fitnessCentersArray){
             if(FitnessCenterArray.getFitnessCenterName().equals(name)){
                 return null;
             }
         }
         
         FitnessCenter fitnessCenter = new FitnessCenter(name);
-        this.FitnessCentersArray.add(fitnessCenter);
+        this.fitnessCentersArray.add(fitnessCenter);
         return fitnessCenter;
 }
+    
+    public void deleteFitnessCenter(String name) {
+        for (FitnessCenter fitnessCenterArray : fitnessCentersArray) {
+            if (fitnessCenterArray.getFitnessCenterName().equals(name)) {
+                fitnessCentersArray.remove(fitnessCenterArray);
+                break;
+            }
+        }
+    }
+
+    public ArrayList<FitnessCenter> getFitnessCentersArray() {
+        return fitnessCentersArray;
+    }
+
+    public void setFitnessCentersArray(ArrayList<FitnessCenter> fitnessCentersArray) {
+        this.fitnessCentersArray = fitnessCentersArray;
+    }
+    
+    
 }

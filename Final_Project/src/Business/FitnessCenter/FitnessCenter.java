@@ -12,33 +12,33 @@ import java.util.ArrayList;
  */
 public class FitnessCenter extends Organization{
     
-    private String FitnessCenterName;
-    private String FitnessCenterAddress;
+    private String fitnessCenterName;
+    private String fitnessCenterAddress;
 
     public String getFitnessCenterName() {
-        return FitnessCenterName;
+        return fitnessCenterName;
     }
 
     public void setFitnessCenterName(String FitnessCenterName) {
-        this.FitnessCenterName = FitnessCenterName;
+        this.fitnessCenterName = FitnessCenterName;
     }
 
     public String getFitnessCenterAddress() {
-        return FitnessCenterAddress;
+        return fitnessCenterAddress;
     }
 
     public void setFitnessCenterAddress(String FitnessCenterAddress) {
-        this.FitnessCenterAddress = FitnessCenterAddress;
+        this.fitnessCenterAddress = FitnessCenterAddress;
     }
     
     public FitnessCenter(String FitnessCenterName){
         super();
-        this.FitnessCenterName = FitnessCenterName;
+        this.fitnessCenterName = FitnessCenterName;
     }
     
     @Override
     public String toString(){
-        return this.FitnessCenterName;
+        return this.fitnessCenterName;
     }
     
     @Override

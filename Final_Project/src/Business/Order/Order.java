@@ -4,7 +4,7 @@
  */
 package Business.Order;
 
-import Business.Products.Product;
+import Business.Produce.Produce;
 import Business.WorkQueue.WorkRequest;
 import java.util.ArrayList;
 import java.util.Random;
@@ -15,7 +15,7 @@ import java.util.Random;
  */
 public class Order extends WorkRequest {
     private String id;
-    private ArrayList<Product> items;
+    private ArrayList<Produce> items;
     private int quantity;
     private double price;
     private String type;
@@ -34,11 +34,11 @@ public class Order extends WorkRequest {
         this.id = id;
     }
 
-    public ArrayList<Product> getItems() {
+    public ArrayList<Produce> getItems() {
         return items;
     }
 
-    public void setItems(ArrayList<Product> items) {
+    public void setItems(ArrayList<Produce> items) {
         this.items = items;
     }
 
@@ -66,7 +66,7 @@ public class Order extends WorkRequest {
         this.type = type;
     }
 
-    public void addItem(Product product, int quantity) {
+    public void addItem(Produce product, int quantity) {
         this.items.add(product);
         this.quantity = quantity;
     }
