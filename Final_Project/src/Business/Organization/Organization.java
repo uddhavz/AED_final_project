@@ -72,7 +72,7 @@ public abstract class Organization {
         return orgID;
     }
 
-    public EmpDirectory getEmployeeDirectory() {
+    public EmpDirectory getEmpDirectory() {
         return empDirectory;
     }
     
