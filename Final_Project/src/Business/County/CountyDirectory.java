@@ -31,11 +31,11 @@ public class CountyDirectory {
         return county;
     }
 
-    public ArrayList<County> getWarehouseDirectoryArray() {
+    public ArrayList<County> getCountyDirectoryArray() {
         return countyArray;
     }
 
-    public void deleteWarehouse(County county) {
+    public void deleteCounty(County county) {
         countyArray.remove(county);
     }
 }
