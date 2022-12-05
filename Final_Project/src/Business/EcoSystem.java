@@ -28,10 +28,10 @@ public class EcoSystem extends Organization {
         return business;
     }
     
-    public State createAndAddNetwork(){
-        State network=new State();
-        stateList.add(network);
-        return network;
+    public State createAndAddState(){
+        State state=new State();
+        stateList.add(state);
+        return state;
     }
     
     @Override
@@ -52,12 +52,12 @@ public class EcoSystem extends Organization {
     
     
 
-    public ArrayList<State> getNetworkList() {
+    public ArrayList<State> getStateList() {
         return stateList;
     }
 
-    public void setNetworkList(ArrayList<State> networkList) {
-        this.stateList = networkList;
+    public void setStateList(ArrayList<State> stateList) {
+        this.stateList = stateList;
     }
     
     public boolean checkIfUserIsUnique(String userName){
