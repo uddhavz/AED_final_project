@@ -4,6 +4,9 @@
  */
 package UserInterface.Client;
 
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+
 /**
  *
  * @author uddhavzambare
@@ -13,7 +16,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ClientHomeJPanel
      */
-    public ClientHomeJPanel() {
+    public ClientHomeJPanel(UserAccount account, EcoSystem eco) {
         initComponents();
     }
 

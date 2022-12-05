@@ -4,6 +4,8 @@
  */
 package UserInterface.Admin;
 
+import Business.EcoSystem;
+
 /**
  *
  * @author uddhavzambare
@@ -13,7 +15,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
     /**
      * Creates new form AdminHomeJPanel
      */
-    public AdminHomeJPanel() {
+    public AdminHomeJPanel(EcoSystem ecosystem) {
         initComponents();
     }
 

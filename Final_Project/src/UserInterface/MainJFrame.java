@@ -4,6 +4,25 @@
  */
 package UserInterface;
 
+import Business.County.County;
+import Business.DB4OUtil.DB4OUtil;
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.FNS.FNS;
+import Business.FitnessCenter.FitnessCenter;
+import Business.Organization.Organization;
+import Business.State.State;
+import Business.UserAccount.UserAccount;
+import Business.Vendor.Vendor;
+import UserInterface.Admin.AdminHomeJPanel;
+import UserInterface.Client.ClientHomeJPanel;
+import UserInterface.Client.RegistrationJPanel;
+import UserInterface.FitnessCenter.CreateFitnessCenterHomeJPanel;
+import UserInterface.FitnessCenter.FitnessCenterEnterpriseAdminHomeJPanel;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author uddhavzambare
@@ -13,8 +32,32 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
+    
+    private EcoSystem system;
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    
+    public static JPanel mainPanel;
+    
     public MainJFrame() {
         initComponents();
+        
+        system = dB4OUtil.retrieveSystem();
+        
+        
+        btnSignup.setOpaque(false);
+        btnSignup.setContentAreaFilled(false);
+        btnSignup.setBorderPainted(false);
+        
+        this.mainPanel = mainJPanel;
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        
+        this.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    DB4OUtil.getInstance().storeSystem(system);
+                e.getWindow().dispose();
+            }
+        });            
     }
 
     /**
@@ -26,21 +69,307 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        mainJPanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        btnSignup = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
+        imgLogo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        bgImage = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mainJPanel.setLayout(new java.awt.CardLayout());
+
+        jPanel3.setBackground(new java.awt.Color(79, 173, 177));
+        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        btnSignup.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnSignup.setForeground(new java.awt.Color(0, 100, 255));
+        btnSignup.setText("Sign up here!");
+        btnSignup.setBorder(null);
+        btnSignup.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnSignup.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        btnSignup.setOpaque(true);
+        btnSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignupActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(153, 153, 0)));
+
+        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel11.setText("Username:");
+
+        btnLogin.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogin.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel12.setText("Password:");
+
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jLabel2.setText("Login");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPassword))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(79, 79, 79)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Don't have an account? ");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, 0)
+                        .addComponent(btnSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(1090, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(131, 131, 131))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(bgImage, javax.swing.GroupLayout.PREFERRED_SIZE, 1540, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(2, 2, 2)
+                    .addComponent(bgImage, javax.swing.GroupLayout.PREFERRED_SIZE, 925, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(273, Short.MAX_VALUE)))
+        );
+
+        mainJPanel.add(jPanel2, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1600, Short.MAX_VALUE)
+            .addComponent(mainJPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addComponent(mainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupActionPerformed
+        // TODO add your handling code here:
+
+        RegistrationJPanel registrationPanel = new RegistrationJPanel(system);
+        mainJPanel.add("RegistrationJPanel", registrationPanel);
+        CardLayout layout = (CardLayout)mainJPanel.getLayout();
+        layout.next(mainJPanel);
+    }//GEN-LAST:event_btnSignupActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+        if(txtUsername.getText().isEmpty() || txtPassword.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null,"Please enter Username and Password");
+            return;
+        }
+        
+        UserAccount userAccount = system.getUserAccountDirectory().authentication(txtUsername.getText(), txtPassword.getText());
+        Enterprise inEnterprise=null;
+        Organization inOrganization=null;
+        County county = null;
+        String userName = txtUsername.getText();
+        String password = txtPassword.getText();
+
+        if(userAccount==null){
+            //Step 2: Go inside each state and check each enterprise
+            for(State state:system.getStateList()){
+                //Step 2.a: check against each enterprise
+                for(Enterprise enterprise:state.getEnterpriseDirectory().getEnterpriseListArray()){
+                    userAccount=enterprise.getUserAccountDirectory().authentication(userName, password);
+                    if(userAccount==null){
+                        //Step 3:check against each organization for each enterprise
+                        for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            userAccount=organization.getUserAccountDirectory().authentication(userName, password);
+                            if(userAccount!=null){
+                                inEnterprise=enterprise;
+                                inOrganization=organization;
+                                break;
+                            }
+                        }
+
+                    }
+                    else{
+                        inEnterprise=enterprise;
+                        break;
+                    }
+                    if(inOrganization!=null){
+                        break;
+                    }
+                }
+
+                if(inEnterprise!=null){
+                    break;
+                }
+            }
+        }
+
+        if(userAccount==null){
+            for(State state:system.getStateList()){
+                for(Enterprise enterprise:state.getEnterpriseDirectory().getEnterpriseListArray()){
+                    
+                    if(enterprise.getFitnesscenterDirectory()!=null){
+                        for(FitnessCenter fitnesscenter: enterprise.getFitnesscenterDirectory().getFitnessCentersArray()){
+                            userAccount = fitnesscenter.getUserAccountDirectory().authentication(userName, password);
+                            System.out.println(userAccount);
+                            if(userAccount!=null){
+                                System.out.println(userAccount+": FitnessCenter");
+                                inEnterprise=enterprise;
+                                inOrganization=null;
+                                break;
+                            }
+                        }
+                    }
+                    if(enterprise.getCountyDirectory()!=null){
+                        for(County c: enterprise.getCountyDirectory().getCountyDirectoryArray()){
+                            userAccount = c.getUserAccountDirectory().authentication(userName, password);
+                            System.out.println(enterprise.getName());
+                            if(userAccount!=null){
+                                System.out.println(userAccount+": County");
+                                inEnterprise=enterprise;
+                                inOrganization=null;
+                                county = c;
+                                break;
+                            }
+                        }
+                    }
+                    if(enterprise.getVendorDirectory()!=null){
+                        for(Vendor vendor: enterprise.getVendorDirectory().getVendorsArray()){
+                            userAccount = vendor.getUserAccountDirectory().authentication(userName, password);
+                            System.out.println(enterprise.getName());
+                            if(userAccount!=null){
+                                System.out.println(userAccount+": Vendor");
+                                inEnterprise=enterprise;
+                                inOrganization=null;
+                                break;
+                            }
+                        }
+                    }
+                    if(enterprise.getFnsDirectory()!=null){
+                        for(FNS fns: enterprise.getFnsDirectory().getFNS()){
+                            userAccount = fns.getUserAccountDirectory().authentication(userName, password);
+                            if(userAccount!=null){
+                                System.out.println(userAccount+": Food and Nutrition Service");
+                                inEnterprise=enterprise;
+                                inOrganization=null;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                }
+            }
+        }
+        if (userAccount != null) {
+            navigateAfterLogin(userAccount, inEnterprise, county);
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid UserName or Password", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        reset();
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +407,48 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bgImage;
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnSignup;
+    private javax.swing.JLabel imgLogo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel mainJPanel;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
+
+    private void navigateAfterLogin(UserAccount userAccount, Enterprise enterprise, County county) {
+        
+        switch (userAccount.getRole().toString()) {
+            case "Business.Role.SystemAdminRole":
+                AdminHomeJPanel adminHomeJPanel = new AdminHomeJPanel(system);
+                mainJPanel.add("AdminHomeJPanel", adminHomeJPanel);
+                break;
+                
+            case "Client":
+                ClientHomeJPanel clientHomeJPanel = new ClientHomeJPanel(userAccount, system);
+                mainJPanel.add("ClientHomeJPanel", clientHomeJPanel);
+                break;
+                
+            case "Fitness Center Enterprise Admin":
+                FitnessCenterEnterpriseAdminHomeJPanel FCHomeJPanel = new FitnessCenterEnterpriseAdminHomeJPanel(system, enterprise);
+                mainJPanel.add("FitnessCenterEnterpriseAdminHomeJPanel", FCHomeJPanel);
+                break;
+        }
+        
+        CardLayout layout = (CardLayout)mainJPanel.getLayout();
+        layout.next(mainJPanel);
+        
+    }
+    
+    public void reset() {
+        txtUsername.setText("");
+        txtPassword.setText("");
+    }
 }

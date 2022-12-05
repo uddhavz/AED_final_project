@@ -122,5 +122,9 @@ public abstract class Enterprise extends Organization{
         this.fnsDirectory = fnsDirectory;
     }
     
+    public OrganizationDirectory getOrganizationDirectory() {
+        return organizationDirectory;
+    }
+    
         
 }

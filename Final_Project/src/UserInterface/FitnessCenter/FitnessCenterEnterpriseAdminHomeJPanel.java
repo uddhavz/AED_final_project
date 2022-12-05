@@ -17,13 +17,13 @@ import javax.swing.ImageIcon;
  *
  * @author rajsarode
  */
-public class FitnessCenterEnterpriseAdmin extends javax.swing.JPanel {
+public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     /**
      * Creates new form FitnessCenterEnterpriseAdmin
      */
     EcoSystem system;
-    public FitnessCenterEnterpriseAdmin(EcoSystem system, Enterprise enterprise) {
+    public FitnessCenterEnterpriseAdminHomeJPanel(EcoSystem system, Enterprise enterprise) {
         initComponents();
         this.enterprise = enterprise;
         this.system = system;
