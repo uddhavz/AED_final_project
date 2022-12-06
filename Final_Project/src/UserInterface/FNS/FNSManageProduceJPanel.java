@@ -8,7 +8,7 @@ import Business.Enterprise.Enterprise;
 import Business.FNS.FNS;
 import Business.County.County;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.FNSApprovalRequest;
+import Business.WorkQueue.FNSWorkApproval;
 import Business.WorkQueue.WorkRequest;
 import UserInterface.CallDialog;
 import java.util.ArrayList;
@@ -232,10 +232,10 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
             CallDialog callDialog = new CallDialog(mainPanel, "Please select a row to approve", false);
             return;
         }
-        FNSApprovalRequest request = (FNSApprovalRequest) tblProducts.getValueAt(selectedRow, 0);
+        FNSWorkApproval request = (FNSWorkApproval) tblProducts.getValueAt(selectedRow, 0);
         if (request.getStatus().equals("Waiting")) {
             request.setStatus("Approved");
-            request.getProduct().setStatus("Approved");
+            request.getProduce().setStatus("Approved");
 
             populateTable();
             CallDialog callDialog  = new CallDialog(mainPanel, "Produce approved successfully", true);
@@ -252,10 +252,10 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
             CallDialog callDialog = new CallDialog(mainPanel, "Please select a row to deny", false);
             return;
         }
-        FNSApprovalRequest request = (FNSApprovalRequest) tblProducts.getValueAt(selectedRow, 0);
+        FNSWorkApproval request = (FNSWorkApproval) tblProducts.getValueAt(selectedRow, 0);
         if (request.getStatus().equals("Waiting")) {
             request.setStatus("Denied");
-            request.getProduct().setStatus("Denied");
+            request.getProduce().setStatus("Denied");
 
             populateTable();
             CallDialog callDialog = new CallDialog(mainPanel, "Produce denied successfully", true);
@@ -275,7 +275,7 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
             for(County county: enterprise.getCountyDirectory().getCountyDirectoryArray()){
                 ArrayList<WorkRequest> workReq = county.getWorkQueue().getWorkRequestListArray3();
                 for(int i=workReq.size()-1; i>=0; i--){
-                    FNSApprovalRequest req = (FNSApprovalRequest)workReq.get(i);
+                    FNSWorkApproval req = (FNSWorkApproval)workReq.get(i);
                     Object[] row = new Object[4];
                     row[0] = req;
                     row[1] = req.getProduce();

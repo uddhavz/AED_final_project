@@ -47,7 +47,7 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
         
         setModel();
 //        setLogo();
-        setBackground();
+        //setBackground();
         
     }
     
@@ -325,7 +325,7 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
     private void btnManageProductReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageProductReqActionPerformed
         // TODO add your handling code here:
 
-        FNSManageProductJPanel fnsManageProductsJPanel = new FNSManageProductJPanel(userAccount, countyEnterpriseArray, fns);
+        FNSManageProduceJPanel fnsManageProductsJPanel = new FNSManageProduceJPanel(userAccount, countyEnterpriseArray, fns);
         ActivityJPanel.add("FNSManageProductJPanel", fnsManageProductsJPanel);
         CardLayout layout = (CardLayout) ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
