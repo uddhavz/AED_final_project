@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class County extends Organization{
     
     private String county;
-    private ProduceDirectory productDirectory;
+    private ProduceDirectory produceDirectory;
     private ArrayList<Order> ordersArray;
 
     public String getCounty() {
@@ -33,8 +33,12 @@ public class County extends Organization{
     public County(String county) {
         super();
         this.county = county;
-        this.productDirectory = new ProduceDirectory();
+        this.produceDirectory = new ProduceDirectory();
         this.ordersArray = new ArrayList();
+    }
+    
+    public ProduceDirectory getProduceDirectory() {
+        return produceDirectory;
     }
     
     public void addOrder(Order order){

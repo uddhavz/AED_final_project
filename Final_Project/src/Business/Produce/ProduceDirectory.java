@@ -15,14 +15,15 @@ public class ProduceDirectory {
         produceArray = new ArrayList();
     }
 
-    public ArrayList<Produce> getProducts() {
+    public ArrayList<Produce> getProduceArray() {
         return produceArray;
     }
 
-    public void setProducts(ArrayList<Produce> productsArray) {
-        this.produceArray = productsArray;
+    public void setProduceArray(ArrayList<Produce> produceArray) {
+        this.produceArray = produceArray;
     }
-    
+
+   
     public Produce newProduct(String prodName, double price, int quantity){
         Produce product = new Produce(prodName, price, quantity);
         produceArray.add(product);
