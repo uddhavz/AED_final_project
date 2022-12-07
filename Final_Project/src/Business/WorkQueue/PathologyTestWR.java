@@ -12,7 +12,7 @@ import Business.Produce.Produce;
  *
  * @author tanmayzope
  */
-public class PathologyTestWR {
+public class PathologyTestWR extends WorkRequest{
     
     private String message;
     private String remark;
