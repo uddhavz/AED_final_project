@@ -24,13 +24,13 @@ public class ProduceDirectory {
     }
 
    
-    public Produce newProduct(String prodName, double price, int quantity){
-        Produce product = new Produce(prodName, price, quantity);
-        produceArray.add(product);
-        return product;
+    public Produce newProduce(String prodName, double price, int quantity){
+        Produce produce = new Produce(prodName, price, quantity);
+        produceArray.add(produce);
+        return produce;
     }
     
-    public void removeProduct(Produce product){
+    public void removeProduce(Produce product){
         produceArray.remove(product);
     }
 }

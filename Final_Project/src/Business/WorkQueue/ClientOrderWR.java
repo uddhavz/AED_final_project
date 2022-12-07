@@ -13,7 +13,7 @@ import Business.Order.Order;
  * @author tanmayzope
  */
 
-public class ClientOrderWR {
+public class ClientOrderWR extends WorkRequest{
     
     private Order order;
     private String message;

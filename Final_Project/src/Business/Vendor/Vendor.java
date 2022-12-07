@@ -16,13 +16,13 @@ import java.util.ArrayList;
  */
 public class Vendor extends Organization {
     private String vendorName;
-    private ProduceDirectory productDirectory;
+    private ProduceDirectory produceDirectory;
     private ArrayList<Order> ordersArray;
 
     public Vendor(String name) {
         super();
         this.vendorName = name;
-        this.productDirectory = new ProduceDirectory();
+        this.produceDirectory = new ProduceDirectory();
         this.ordersArray = new ArrayList();
     }
 
@@ -35,8 +35,8 @@ public class Vendor extends Organization {
         this.vendorName = vendorName;
     }
     
-    public ProduceDirectory getProductDirectory() {
-        return productDirectory;
+    public ProduceDirectory getProduceDirectory() {
+        return produceDirectory;
     }
     
     public ArrayList<Order> getOrders() {
