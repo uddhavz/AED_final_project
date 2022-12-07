@@ -434,13 +434,13 @@ public class CountyAdminCreateProduceJPanel extends javax.swing.JPanel {
             String name = txtProduceName.getText();
             double price = Double.parseDouble(txtPrice.getText());
             int quantity = Integer.parseInt(txtQuantity.getText());
-            Produce produce = county.getProduceDirectory().newProduct(name, price, quantity);
+            Produce produce = county.getProduceDirectory().newProduce(name, price, quantity);
             produce.setStatus("Waiting");
 
             FNSWorkApproval request = new FNSWorkApproval();
             request.setStatus("Waiting");
             request.setProduce(produce);
-            request.setMsg("Please approve");
+            request.setMessage("Please approve");
             request.setSender(userAccount);
             request.setCounty(county);
 
