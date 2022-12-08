@@ -10,6 +10,8 @@ import Business.Enterprise.Enterprise;
 import Business.FitnessCenter.FitnessCenter;
 import Business.Role.PathologistRole;
 import Business.UserAccount.UserAccount;
+import UserInterface.CallDialog;
+import static UserInterface.MainJFrame.mainPanel;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 
@@ -17,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author rajsarode
  */
-public class CreatePathologist extends javax.swing.JPanel {
+public class CreatePathologistJPanel extends javax.swing.JPanel {
     
     private Enterprise enterprise;
     EcoSystem system;
@@ -25,7 +27,7 @@ public class CreatePathologist extends javax.swing.JPanel {
     /**
      * Creates new form CreatePathologist
      */
-    public CreatePathologist() {
+    public CreatePathologistJPanel(Enterprise enterprise) {
         initComponents();
         this.enterprise = enterprise;
         lblPatholgistNameValidation.setVisible(false);
@@ -360,7 +362,7 @@ public class CreatePathologist extends javax.swing.JPanel {
         int selectedRowIndex = tblPathologists.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            Toast toast = new Toast(mainPanel, "Please select a row to modify", false);
+            CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to modify", false);
             return;
         }
         FitnessCenter fitnesscenter = (FitnessCenter) fitnesscenterNamePicker.getSelectedItem();
@@ -379,7 +381,7 @@ public class CreatePathologist extends javax.swing.JPanel {
 
         int selectedRow = tblPathologists.getSelectedRow();
         if (selectedRow < 0) {
-            Toast toast = new Toast(mainPanel, "Please select a row to delete", false);
+            CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to delete", false);
             return;
         }
         FitnessCenter fitnesscenter = (FitnessCenter) fitnesscenterNamePicker.getSelectedItem();
@@ -388,11 +390,11 @@ public class CreatePathologist extends javax.swing.JPanel {
 
         UserAccount userAcc = (UserAccount) model.getValueAt(selectedRow, 0);
 
-        fitnesscenter.getEmployeeDirectory().deleteEmp(userAcc.getEmp());
+        fitnesscenter.getEmpDirectory().deleteEmp(userAcc.getEmp());
         fitnesscenter.getUserAccountDirectory().removeUser(userAcc);
         populateTable(fitnesscenter);
 
-        Toast toast = new Toast(mainPanel, "Lab technician deleted successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "Lab technician deleted successfully", true);
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void fitnesscenterNamePickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitnesscenterNamePickerActionPerformed
@@ -482,7 +484,7 @@ public class CreatePathologist extends javax.swing.JPanel {
         String password = txtPassword.getText();
         String name = txtPathologistName.getText();
 
-        Emp employee = fitnesscenter.getEmployeeDirectory().createEmp(name);
+        Emp employee = fitnesscenter.getEmpDirectory().createEmp(name);
         UserAccount userAcc = fitnesscenter.getUserAccountDirectory().createUserAccount(username, password, employee, new PathologistRole());
 
         populateTable(fitnesscenter);
@@ -492,7 +494,7 @@ public class CreatePathologist extends javax.swing.JPanel {
         btnDelete.setEnabled(true);
         btnModify.setEnabled(true);
         
-        Toast toast = new Toast(mainPanel, "Lab technician added successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "Lab technician added successfully", true);
     }
     
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed

@@ -4,11 +4,14 @@
  */
 package UserInterface.InventoryManager;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.State.State;
 import Business.UserAccount.UserAccount;
 import Business.Vendor.Vendor;
+import UserInterface.MainJFrame;
+import java.awt.CardLayout;
 import java.awt.Image;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -232,8 +235,8 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
     private void btnViewOrderHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewOrderHistoryActionPerformed
         // TODO add your handling code here:
 
-        ManagerViewOrderHistoryJPanel managerOrderJPanel = new ManagerViewOrderHistoryJPanel(account, warehouseEnterpriseArray, distribution);
-        ActivityJPanel.add("ManagerViewOrderHistoryJPanel", managerOrderJPanel);
+        InventoryViewOrderHistoryJPanel managerOrderJPanel = new InventoryViewOrderHistoryJPanel(account, countyEnterpriseArray, vendor);
+        ActivityJPanel.add("InventoryViewOrderHistoryJPanel", managerOrderJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
     }//GEN-LAST:event_btnViewOrderHistoryActionPerformed
@@ -241,8 +244,8 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
     private void btnPlaceShippingOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceShippingOrderActionPerformed
         // TODO add your handling code here:
 
-        ManagerPlaceShippingOrderJPanel managerOrderJPanel = new ManagerPlaceShippingOrderJPanel(account, warehouseEnterpriseArray, distribution);
-        ActivityJPanel.add("ManagerPlaceShippingOrderJPanel", managerOrderJPanel);
+        InventoryPlaceShippingOrderJPanel managerOrderJPanel = new InventoryPlaceShippingOrderJPanel(account, countyEnterpriseArray, vendor);
+        ActivityJPanel.add("InventoryPlaceShippingOrderJPanel", managerOrderJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
 
@@ -251,7 +254,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
     private void btnAssignDeliveryPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignDeliveryPartnerActionPerformed
         // TODO add your handling code here:
 
-        ManagerAssignDeliveryJPanel manageShippingPartnerJPanel = new ManagerAssignDeliveryJPanel(account, warehouseEnterpriseArray, distribution);
+        InventoryManagerAssignDeliveryJPanel manageShippingPartnerJPanel = new InventoryManagerAssignDeliveryJPanel(account, countyEnterpriseArray, vendor);
         ActivityJPanel.add("ManagerAssignDeliveryJPanel", manageShippingPartnerJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);

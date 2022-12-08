@@ -4,8 +4,11 @@
  */
 package UserInterface.FitnessCenter;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import UserInterface.MainJFrame;
+import java.awt.CardLayout;
 import java.awt.Image;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -30,31 +33,31 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
     }
     
     private void setLogo() {
-        Image image = null;
-        try {
-            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        imgLogo.setIcon(icon);
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        imgLogo.setIcon(icon);
     }
     
     private void setBackground() {
         
-        Image image = null;
-        try {
-                image = ImageIO.read(getClass().getResource("/UI/HospitalEnterpriseAdmin/hospitalbg.jpeg"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        System.out.println(icon);
-        bgImage.setIcon(icon);
+//        Image image = null;
+//        try {
+//                image = ImageIO.read(getClass().getResource("/UI/HospitalEnterpriseAdmin/hospitalbg.jpeg"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        System.out.println(icon);
+//        bgImage.setIcon(icon);
     }
     
 
