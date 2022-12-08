@@ -8,6 +8,8 @@ package UserInterface.FitnessCenter;
 import Business.Enterprise.Enterprise;
 import Business.FitnessCenter.FitnessCenter;
 import Business.UserAccount.UserAccount;
+import UserInterface.CallDialog;
+import static UserInterface.MainJFrame.mainPanel;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 
@@ -447,7 +449,7 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
         btnDelete.setEnabled(true);
         btnModify.setEnabled(true);
         
-        Toast toast = new Toast(mainPanel, "Doctor added successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "Dietitian added successfully", true);
     }
     
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -462,7 +464,7 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblDietitian.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            Toast toast = new Toast(mainPanel, "Please select a row to modify", false);
+            CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to modify", false);
             return;
         }
 
@@ -482,7 +484,7 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
 
         int selectedRow = tblDietitian.getSelectedRow();
         if (selectedRow < 0) {
-            Toast toast = new Toast(mainPanel, "Please select a row to delete", false);
+            CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to delete", false);
             return;
         }
 
@@ -492,11 +494,11 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
 
         UserAccount userAcc = (UserAccount) model.getValueAt(selectedRow, 0);
 
-        fitnesscenter.getEmployeeDirectory().deleteEmp(userAcc.getEmp());
+        fitnesscenter.getEmpDirectory().deleteEmp(userAcc.getEmp());
         fitnesscenter.getUserAccountDirectory().removeUser(userAcc);
         populateTable(fitnesscenter);
 
-        Toast toast = new Toast(mainPanel, "Dietitian deleted successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "Dietitian deleted successfully", true);
     }//GEN-LAST:event_btnDeleteActionPerformed
     
     private void populateJComboBox() {
@@ -519,21 +521,21 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
 //        String approveDoc = "Approving Doctor";
 //        String consultDoc = "Consulting Doctor";
 
-        for (UserAccount userAcc : fitnesscenter.getUserAccountDirectory().getUserAccountList()) {
-            if (userAcc.getRole().toString().equals(approveDoc) || userAcc.getRole().toString().equals(consultDoc)) {
-                //System.out.println(us.getUsername()+"----"+us.getPassword()+"---"+hospital.getUserAccountDirectory().authenticateUser(us.getUsername(), us.getPassword()));
-                Object[] row = new Object[3];
-                row[0] = userAcc;
-                row[1] = userAcc.getEmp().getName();
-//                if (userAcc.getRole().toString().equals(approveDoc)) {
-//                    row[2] = approveDoc;
-//                } else if (userAcc.getRole().toString().equals(consultDoc)) {
-//                    row[2] = consultDoc;
-//                }
-                model.addRow(row);
-            }
-
-        }
+//        for (UserAccount userAcc : fitnesscenter.getUserAccountDirectory().getUserAccountList()) {
+//            if (userAcc.getRole().toString().equals(approveDoc) || userAcc.getRole().toString().equals(consultDoc)) {
+//                //System.out.println(us.getUsername()+"----"+us.getPassword()+"---"+hospital.getUserAccountDirectory().authenticateUser(us.getUsername(), us.getPassword()));
+//                Object[] row = new Object[3];
+//                row[0] = userAcc;
+//                row[1] = userAcc.getEmp().getName();
+////                if (userAcc.getRole().toString().equals(approveDoc)) {
+////                    row[2] = approveDoc;
+////                } else if (userAcc.getRole().toString().equals(consultDoc)) {
+////                    row[2] = consultDoc;
+////                }
+//                model.addRow(row);
+//            }
+//
+//        }
     }
     
 

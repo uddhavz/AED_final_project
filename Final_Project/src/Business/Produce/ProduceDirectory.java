@@ -30,7 +30,7 @@ public class ProduceDirectory {
         return produce;
     }
     
-    public void removeProduce(Produce product){
-        produceArray.remove(product);
+    public void removeProduce(Produce produce){
+        produceArray.remove(produce);
     }
 }

@@ -8,6 +8,8 @@ import Business.Employee.Emp;
 import Business.UserAccount.UserAccount;
 import Business.Enterprise.Enterprise;
 import Business.FitnessCenter.FitnessCenter;
+import UserInterface.CallDialog;
+import static UserInterface.MainJFrame.mainPanel;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,7 +23,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateFitnessCenterJPanel
      */
-    public CreateFitnessCenterHomeJPanel() {
+    public CreateFitnessCenterHomeJPanel(Enterprise enterprise) {
         initComponents();
         this.enterprise = enterprise;
         populateTable();
@@ -325,7 +327,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblFitnessCenter.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            Toast toast = new Toast(mainPanel, "Please select a row to modify", false);
+            CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to modify", false);
             btnModify.setEnabled(true);
             return;
         }
@@ -348,7 +350,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblFitnessCenter.getSelectedRow();
 
         if (selectedRowIndex < 0) {
-            Toast toast = new Toast(mainPanel, "Please select a row to delete", false);
+            CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to delete", false);
             return;
         }
 
@@ -359,7 +361,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         this.enterprise.getFitnesscenterDirectory().deleteFitnessCenter(name);
         populateTable();
 
-        Toast toast = new Toast(mainPanel, "FitnessCenter deleted successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "FitnessCenter deleted successfully", true);
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void txtFitnessCenterNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFitnessCenterNameFocusGained
@@ -434,7 +436,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
 
         populateTable();
         
-        Toast toast = new Toast(mainPanel, "Hospital updated successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "Hospital updated successfully", true);
     }
     
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -458,7 +460,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
             txtAddress.setText("");
             populateTable();
 
-            Toast toast = new Toast(mainPanel, "FitnessCenter added successfully", true);
+            CallDialog calldialog = new CallDialog(mainPanel, "FitnessCenter added successfully", true);
         }
     }//GEN-LAST:event_btnCreateActionPerformed
 
