@@ -17,9 +17,14 @@ import Business.Vendor.Vendor;
 import UserInterface.Admin.AdminHomeJPanel;
 import UserInterface.Client.ClientHomeJPanel;
 import UserInterface.Client.RegistrationJPanel;
-import UserInterface.FitnessCenter.CreateFitnessCenterHomeJPanel;
 import UserInterface.FitnessCenter.FitnessCenterEnterpriseAdminHomeJPanel;
 import java.awt.CardLayout;
+import java.awt.Image;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -57,7 +62,9 @@ public class MainJFrame extends javax.swing.JFrame {
                     DB4OUtil.getInstance().storeSystem(system);
                 e.getWindow().dispose();
             }
-        });            
+        });
+        
+        setBackground();
     }
 
     /**
@@ -88,7 +95,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         mainJPanel.setLayout(new java.awt.CardLayout());
 
-        jPanel3.setBackground(new java.awt.Color(79, 173, 177));
+        jPanel3.setBackground(new java.awt.Color(0, 102, 0));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnSignup.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
@@ -215,9 +222,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(131, 131, 131))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(bgImage, javax.swing.GroupLayout.PREFERRED_SIZE, 1540, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(bgImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,10 +231,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(2, 2, 2)
-                    .addComponent(bgImage, javax.swing.GroupLayout.PREFERRED_SIZE, 925, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(273, Short.MAX_VALUE)))
+                .addComponent(bgImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         mainJPanel.add(jPanel2, "card2");
@@ -238,7 +240,7 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainJPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
+            .addComponent(mainJPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -450,5 +452,20 @@ public class MainJFrame extends javax.swing.JFrame {
     public void reset() {
         txtUsername.setText("");
         txtPassword.setText("");
+    }
+    
+    private void setBackground() {
+        
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/organicbg.jpeg"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(1450, 960, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        System.out.println(icon);
+        bgImage.setIcon(icon);
     }
 }
