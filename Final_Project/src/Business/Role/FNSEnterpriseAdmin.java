@@ -10,7 +10,7 @@ package Business.Role;
  */
 
 //Center for Food Safety and Applied Nutrition
-public class FNSEnterpriseAdmin {
+public class FNSEnterpriseAdmin extends Role{
     
     @Override
     public String toString(){

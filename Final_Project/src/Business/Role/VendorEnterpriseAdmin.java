@@ -8,7 +8,7 @@ package Business.Role;
  *
  * @author uddhavzambare
  */
-public class VendorEnterpriseAdmin {
+public class VendorEnterpriseAdmin extends Role {
     
     @Override
     public String toString(){
