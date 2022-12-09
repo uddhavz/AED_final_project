@@ -4,9 +4,17 @@
  */
 package UserInterface.VendorEnterpriseAdmin;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import UserInterface.MainJFrame;
 import java.awt.CardLayout;
+import java.awt.Image;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -26,8 +34,39 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.system = system;
         
+        setLogo();
+        setBackground();
 
     }
+    
+    private void setLogo() {
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
+    }
+    
+    private void setBackground() {
+        
+        Image image = null;
+        try {
+                image = ImageIO.read(getClass().getResource("/UserInterface/VendorEnterpriseAdmin/vendorbg.jpeg"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        System.out.println(icon);
+        bgImage.setIcon(icon);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -260,6 +299,11 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
 
     private void btnManageManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageManagerActionPerformed
         // TODO add your handling code here:
+        ManageManagerJpanel manageManagerJPanel = new ManageManagerJpanel(enterprise);
+        ActivityJPanel.add("ManageManagerJPanel", manageManagerJPanel);
+        CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
+        layout.next(ActivityJPanel);
+        
     }//GEN-LAST:event_btnManageManagerActionPerformed
 
     private void btnManageDistributionUnitsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageDistributionUnitsActionPerformed
@@ -273,10 +317,20 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
+        
+        DB4OUtil.getInstance().storeSystem(system);
+        MainJFrame.mainPanel.remove(this);
+        CardLayout layout = (CardLayout) MainJFrame.mainPanel.getLayout();
+        layout.first(MainJFrame.mainPanel);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnManageHomeDeliveryPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageHomeDeliveryPartnerActionPerformed
         // TODO add your handling code here:
+        
+        ManageHomeDeliveryJPanel manageHomeDeliveryJPanel = new ManageHomeDeliveryJPanel(enterprise);
+        ActivityJPanel.add("ManageHomeDeliveryJPanel", manageHomeDeliveryJPanel);
+        CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
+        layout.next(ActivityJPanel);
     }//GEN-LAST:event_btnManageHomeDeliveryPartnerActionPerformed
 
 
