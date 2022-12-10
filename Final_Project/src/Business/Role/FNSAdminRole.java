@@ -13,7 +13,7 @@ public class FNSAdminRole extends Role{
     
     @Override
     public String toString(){
-        return "FDA Enterprise Admin";
+        return "FNS Admin";
     }
     
 }

@@ -4,6 +4,7 @@
  */
 package UserInterface.Shipping;
 
+import Business.County.County;
 import Business.Produce.Produce;
 import Business.UserAccount.UserAccount;
 import Business.Vendor.Vendor;
@@ -21,16 +22,16 @@ import javax.swing.table.DefaultTableModel;
 public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
     
     private UserAccount userAccount;
-    private Vendor vendor;
+    private County county;
     ShippingOrderWR request;
     
     /**
      * Creates new form ManageShippingPartnerJPanel
      */
-    public ManageShippingPartnerJPanel(UserAccount userAccount, Vendor vendor) {
+    public ManageShippingPartnerJPanel(UserAccount userAccount, County county) {
         initComponents();
         this.userAccount = userAccount;
-        this.vendor = vendor;
+        this.county = county;
         panelProcessOrder.setVisible(false);
         
         populateTable();
@@ -40,7 +41,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblWorkRequest.getModel();
         model.setRowCount(0);
 
-        ArrayList<WorkRequest> wr = vendor.getWorkQueue().getWorkRequestListArray();
+        ArrayList<WorkRequest> wr = county.getWorkQueue().getWorkRequestListArray();
 
         for (int i = wr.size() - 1; i >= 0; i--) {
             ShippingOrderWR req = (ShippingOrderWR) wr.get(i);

@@ -4,12 +4,20 @@
  */
 package UserInterface.Shipping;
 
+import Business.County.County;
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
-import Business.Vendor.Vendor;
 import UserInterface.MainJFrame;
 import java.awt.CardLayout;
+import java.awt.Image;
+import java.io.IOException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,15 +27,41 @@ public class ShippingHomeJPanel extends javax.swing.JPanel {
     
     public static EcoSystem system;
     private UserAccount userAccount;
-    private Vendor vendor;
+    private County county;
     
     /**
      * Creates new form ShippingOptionsJPanel
      */
-    public ShippingHomeJPanel() {
+    public ShippingHomeJPanel(EcoSystem system, UserAccount userAccount,County county) {
         initComponents();
+        this.system = system;
+        this.userAccount = userAccount;
+        this.county = county;
+        
+//        setLogo();
+//        setBackground();
     }
 
+    
+//         private void setLogo() {
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        imgLogo.setIcon(icon);
+//    }
+//    
+//    private void setBackground() {
+//        
+//        URL url = this.getClass().getResource("/UI/DeliveryPartner/deliverybg.gif");        
+//        Icon icon = new ImageIcon(url);
+//        bgImage.setIcon(icon);
+//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -125,7 +159,7 @@ public class ShippingHomeJPanel extends javax.swing.JPanel {
     private void btnShippingOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShippingOrdersActionPerformed
         // TODO add your handling code here:
 
-        ManageShippingPartnerJPanel manageShippingManJPanel = new ManageShippingPartnerJPanel(userAccount, vendor);
+        ManageShippingPartnerJPanel manageShippingManJPanel = new ManageShippingPartnerJPanel(userAccount, county);
         ActivityJPanel.add("ManageShippingPartnerJPanel", manageShippingManJPanel);
         CardLayout layout = (CardLayout) ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
