@@ -72,17 +72,17 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel3.setFont(new java.awt.Font("Devanagari MT", 1, 36)); // NOI18N
-        jLabel3.setText("Lab Test Approving Doctor");
+        jLabel3.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
+        jLabel3.setText("Send Diet to Client");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(350, 350, 350)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(432, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addContainerGap(376, Short.MAX_VALUE))
+                .addGap(430, 430, 430))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
