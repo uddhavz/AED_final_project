@@ -42,38 +42,38 @@ public class RegistrationJPanel extends javax.swing.JPanel {
         btnLogin.setContentAreaFilled(false);
         btnLogin.setBorderPainted(false);
         
-        setLogo();
-        setBackground();
+//        setLogo();
+//        setBackground();
         hideAllValidationLabels();
     }
     
-    private void setLogo() {
-        Image image = null;
-        try {
-            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        imgLogo.setIcon(icon);
-    }
-    
-    private void setBackground() {
-        
-        Image image = null;
-        try {
-            image = ImageIO.read(getClass().getResource("/UserInterface/login_bg.jpeg"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(1450, 960, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        System.out.println(icon);
-        bgImage.setIcon(icon);
-    }
+//    private void setLogo() {
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        imgLogo.setIcon(icon);
+//    }
+//    
+//    private void setBackground() {
+//        
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UserInterface/login_bg.jpeg"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(1450, 960, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        System.out.println(icon);
+//        bgImage.setIcon(icon);
+//    }
 
     // Function to hide all validation labels
     private void hideAllValidationLabels() {

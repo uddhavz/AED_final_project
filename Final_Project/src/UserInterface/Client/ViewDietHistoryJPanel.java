@@ -66,7 +66,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 row[0] = testReq;
                 row[1] = testReq.getRemark();
                 row[2] = testReq.getFitnessCenter();
-                row[3] = testReq.getProduce().getProdName();
+                row[3] = testReq.getTest();
                 row[4] = testReq.getStatus();
                 model.addRow(row);
             }
@@ -312,7 +312,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
             return;
         }
         PathologyTestWR request = (PathologyTestWR) tblRequest.getValueAt(selectedRow, 0);
-        lblTestKit.setText(request.getProduce().getProdName());
+        lblTestKit.setText(request.getTest());
         lblResult.setText(request.getTestResult());
         lblDoctorRemarks.setText(request.getRemark());
         
@@ -341,7 +341,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 }
                 
                 str=str + count + ". ";
-                str=str+"  "+lt.getProduce().getProdName()+" - "+lt.getTestResult()+"\n";
+                str=str+"  "+lt.getTest()+" - "+lt.getTestResult()+"\n";
 //                str+="-------------------------------------\n";
                 count++;
             }
