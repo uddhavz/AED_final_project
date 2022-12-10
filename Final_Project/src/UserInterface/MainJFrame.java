@@ -17,7 +17,16 @@ import Business.Vendor.Vendor;
 import UserInterface.Admin.AdminHomeJPanel;
 import UserInterface.Client.ClientHomeJPanel;
 import UserInterface.Client.RegistrationJPanel;
+import UserInterface.CountyAdmin.CountyAdminOptionJPanel;
+import UserInterface.CountyEnterpriseAdmin.CountyOptionsJPanel;
+import UserInterface.DeliveryPartner.DeliveryPartnerHomeJPanel;
+import UserInterface.Dietitian.DietitianHomeJPanel;
+import UserInterface.FNS.FNSAdminJPanel;
+import UserInterface.FNSEnterpriseAdmin.FNSEnterpriseManageJPanel;
 import UserInterface.FitnessCenter.FitnessCenterEnterpriseAdminHomeJPanel;
+import UserInterface.InventoryManager.InventoryManagerHomeJpanel;
+import UserInterface.Shipping.ShippingHomeJPanel;
+import UserInterface.VendorEnterpriseAdmin.VendorEnterpriseAdminOptionsJPanel;
 import java.awt.CardLayout;
 import java.awt.Image;
 import java.io.IOException;
@@ -442,6 +451,68 @@ public class MainJFrame extends javax.swing.JFrame {
                 FitnessCenterEnterpriseAdminHomeJPanel FCHomeJPanel = new FitnessCenterEnterpriseAdminHomeJPanel(system, enterprise);
                 mainJPanel.add("FitnessCenterEnterpriseAdminHomeJPanel", FCHomeJPanel);
                 break;
+                
+            case "Agriculture Enterprise Admin":
+                CountyOptionsJPanel CountyHomeJPanel = new CountyOptionsJPanel(system, enterprise);
+                mainJPanel.add("CountyOptionsJPanel", CountyHomeJPanel);
+                break;
+                
+            case "Deliver Person":
+                DeliveryPartnerHomeJPanel DeliveryHomeJPanel = new DeliveryPartnerHomeJPanel(system,userAccount, enterprise);
+                mainJPanel.add("DeliveryPartnerHomeJPanel", DeliveryHomeJPanel);
+                break;
+                
+            case "Dietitian":
+                DietitianHomeJPanel DietitianHomeJPanel = new DietitianHomeJPanel(system,userAccount, enterprise);
+                mainJPanel.add("DietitianHomeJPanel", DietitianHomeJPanel);
+                break;
+                
+            case "FNS Admin":
+                FNSAdminJPanel FNSAdminJPanel = new FNSAdminJPanel(system, enterprise, userAccount);
+                mainJPanel.add("FNSAdminJPanel", FNSAdminJPanel);
+                break;
+                
+            case "FNS Enterprise Admin":
+                FNSEnterpriseManageJPanel FNSEnterpriseAdminJPanel = new FNSEnterpriseManageJPanel(system, enterprise);
+                mainJPanel.add("FNSEnterpriseManageJPanel", FNSEnterpriseAdminJPanel);
+                break;
+                
+            case "Farmer":
+                CountyAdminOptionJPanel CountyAdminJPanel = new CountyAdminOptionJPanel(userAccount,county,system);
+                mainJPanel.add("CountyAdminOptionJPanel", CountyAdminJPanel);
+                break;
+                
+            case "Inventory Manager":
+                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);
+                mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
+                break;
+            
+//            case "Nutrtion Analyst":
+//                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);
+//                mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
+//                break;
+                
+//            case "Pathologist":
+//                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);
+//                mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
+//                break; 
+                
+//             case "Quality Approver":
+//                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);
+//                mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
+//                break;
+                
+                case "Shipping Manager":
+                ShippingHomeJPanel ShippingHJPanel = new ShippingHomeJPanel(system,userAccount,county);
+                mainJPanel.add("ShippingHomeJpanel", ShippingHJPanel);
+                break;
+                
+                case "Vendor Enterprise Admin":
+                VendorEnterpriseAdminOptionsJPanel VendorHJPanel = new VendorEnterpriseAdminOptionsJPanel(system,enterprise);
+                mainJPanel.add("VendorEnterpriseAdminOptionsJPanel", VendorHJPanel);
+                break;
+                
+                
         }
         
         CardLayout layout = (CardLayout)mainJPanel.getLayout();

@@ -57,7 +57,7 @@ public class FNSAdminCreate extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel)tblFNS.getModel();
         model.setRowCount(0);
         
-        String dm = "FDA Admin";
+        String dm = "FNS Admin";
         
         for (UserAccount us: fns.getUserAccountDirectory().getUserAccountList()) {
             if (us.getRole().toString().equals(dm)) {
@@ -494,7 +494,7 @@ public class FNSAdminCreate extends javax.swing.JPanel {
         fns.getUserAccountDirectory().removeUser(us);
         populateTable(fns);
 
-        CallDialog callDialog = new CallDialog(mainPanel, "FDA admin deleted successfully", true);
+        CallDialog callDialog = new CallDialog(mainPanel, "FNS admin deleted successfully", true);
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void enterprisePickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterprisePickerActionPerformed
