@@ -114,7 +114,7 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
         btnConsult.setBackground(new java.awt.Color(79, 173, 177));
-        btnConsult.setText("Consult Patient");
+        btnConsult.setText("Consult Client");
         btnConsult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultActionPerformed(evt);
