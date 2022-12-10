@@ -6,7 +6,7 @@ package Business.WorkQueue;
 
 import Business.Client.Client;
 import Business.FitnessCenter.FitnessCenter;
-import Business.Produce.Produce;
+
 
 /**
  *
@@ -17,7 +17,7 @@ public class PathologyTestWR extends WorkRequest{
     private String message;
     private String remark;
     private Client client;
-    private Produce produce;
+    private String test;
     private FitnessCenter fitnessCenter;
     private String testResult;
 
@@ -45,12 +45,12 @@ public class PathologyTestWR extends WorkRequest{
         this.client = client;
     }
 
-    public Produce getProduce() {
-        return produce;
+    public String getTest() {
+        return test;
     }
 
-    public void setProduce(Produce produce) {
-        this.produce = produce;
+    public void setTest(String test) {
+        this.test = test;
     }
 
     public FitnessCenter getFitnessCenter() {
@@ -68,9 +68,7 @@ public class PathologyTestWR extends WorkRequest{
     public void setTestResult(String testResult) {
         this.testResult = testResult;
     }
-    
-    
-    
+ 
     @Override
     public String toString(){
         return this.message;
