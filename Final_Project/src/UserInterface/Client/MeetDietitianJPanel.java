@@ -32,10 +32,6 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
     Client client;
     ArrayList<String> symptoms;
 
-    
-    /**
-     * Creates new form ConsultDoctorJPanel
-     */
     public MeetDietitianJPanel(UserAccount userAccount, EcoSystem system, Client client) {
         initComponents();
         
@@ -79,7 +75,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
                             centerPicker.addItem(fitnessCenter);
                             if (index == 0){
                                 index=1;
-                                populateDoctorTable(fitnessCenter);
+                                populateDietitianTable(fitnessCenter);
                             }
                         }
                     }
@@ -87,12 +83,12 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
             }
     }
     
-    private void populateDoctorTable(FitnessCenter fitnessCenter){
-        DefaultTableModel model = (DefaultTableModel) tblDoctor.getModel();
+    private void populateDietitianTable(FitnessCenter fitnessCenter){
+        DefaultTableModel model = (DefaultTableModel) tblDietitian.getModel();
 
         model.setRowCount(0);
         for (UserAccount us : fitnessCenter.getUserAccountDirectory().getUserAccountList()) {
-            if (us.getRole().toString().equals("Consulting Doctor")) {
+            if (us.getRole().toString().equals("Consulting Dietitian")) {
                 Object[] row = new Object[1];
                 row[0] = us;
                 model.addRow(row);
@@ -126,7 +122,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         btnConsultDietitian = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDoctor = new javax.swing.JTable();
+        tblDietitian = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblSymptoms = new javax.swing.JTable();
 
@@ -260,7 +256,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         jLabel5.setText("Select Center:");
 
-        tblDoctor.setModel(new javax.swing.table.DefaultTableModel(
+        tblDietitian.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -279,9 +275,9 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblDoctor);
-        if (tblDoctor.getColumnModel().getColumnCount() > 0) {
-            tblDoctor.getColumnModel().getColumn(0).setResizable(false);
+        jScrollPane1.setViewportView(tblDietitian);
+        if (tblDietitian.getColumnModel().getColumnCount() > 0) {
+            tblDietitian.getColumnModel().getColumn(0).setResizable(false);
         }
 
         tblSymptoms.setModel(new javax.swing.table.DefaultTableModel(
@@ -489,7 +485,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lblAddVisitReasonValidation;
     private javax.swing.JPanel mainPanel;
-    private javax.swing.JTable tblDoctor;
+    private javax.swing.JTable tblDietitian;
     private javax.swing.JTable tblHistory;
     private javax.swing.JTable tblSymptoms;
     private javax.swing.JTextField txtAddVisitReason;

@@ -23,9 +23,6 @@ import javax.swing.table.DefaultTableModel;
 
 public class ApprovalDietitianJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form ApproveDoctorJPanel
-     */
     private UserAccount account;
     private FitnessCenter fitnessCenter;
     PathologyTestWR request;
@@ -128,8 +125,8 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         }
 
         btnApproveTest.setBackground(new java.awt.Color(79, 173, 177));
-        btnApproveTest.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
-        btnApproveTest.setText("Approve Test");
+        btnApproveTest.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
+        btnApproveTest.setText("Give Diet");
         btnApproveTest.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnApproveTest.setBorderPainted(false);
         btnApproveTest.addActionListener(new java.awt.event.ActionListener() {
@@ -180,12 +177,12 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         });
 
         jLabel6.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
-        jLabel6.setText("Approve Test");
+        jLabel6.setText("Submit Diet");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel6.setIconTextGap(0);
 
         lblName6.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
-        lblName6.setText("Comments:");
+        lblName6.setText("Diet Plan");
 
         txtComments.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
         txtComments.addFocusListener(new java.awt.event.FocusAdapter() {

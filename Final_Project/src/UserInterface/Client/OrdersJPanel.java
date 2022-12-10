@@ -275,47 +275,47 @@ public class OrdersJPanel extends javax.swing.JPanel {
 
     private void btnSendForTestingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendForTestingActionPerformed
         // TODO add your handling code here:
-
-        int selectedRow = tblOrders.getSelectedRow();
-        if (selectedRow < 0){
-            CallDialog callDialog = new CallDialog(mainPanel, "Please select a row to send", false);
-            return;
-        }
-        
-        ArrayList<WorkRequest> workReq = userAccount.getWorkQueue().getWorkRequestListArray();
-        ClientOrderWR clientOrderWorkReq = null;
-            try {
-                clientOrderWorkReq = (ClientOrderWR)workReq.get(selectedRow);
-            }
-            catch(Exception e){
-
-            }
-
-            Order order = clientOrderWorkReq.getOrder();
-        if (!clientOrderWorkReq.getStatus().equals("Completed")) {
-            CallDialog callDialog = new CallDialog(mainPanel, "Order not delivered to you yet", false);
-            return;
-        }
-
-        PathologyTestWR request = new PathologyTestWR();
-        DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
-//        Produce produce = (Produce)model.getValueAt(selectedRow, 0);
-        
-        FitnessCenter fitnessCenter = (FitnessCenter) fitnesscenterPicker.getSelectedItem();
-        request.setClient(client);
-        System.out.println(client);
-        request.setFitnessCenter(fitnessCenter);
-        request.setTest(txtMessage.getText());
-        request.setMessage(txtMessage.getText());
-        request.setStatus("Sample sent");
-        request.setTestResult("");
-        
-        fitnessCenter.getWorkQueue().getWorkRequestListArray2().add(request);
-        userAccount.getWorkQueue().getWorkRequestListArray2().add(request);
-        
-        CallDialog callDialog = new CallDialog(mainPanel, "Sample sent successfully", true);
-        
-        populateTable();
+//
+//        int selectedRow = tblOrders.getSelectedRow();
+//        if (selectedRow < 0){
+//            CallDialog callDialog = new CallDialog(mainPanel, "Please select a row to send", false);
+//            return;
+//        }
+//        
+//        ArrayList<WorkRequest> workReq = userAccount.getWorkQueue().getWorkRequestListArray();
+//        ClientOrderWR clientOrderWorkReq = null;
+//            try {
+//                clientOrderWorkReq = (ClientOrderWR)workReq.get(selectedRow);
+//            }
+//            catch(Exception e){
+//
+//            }
+//
+//            Order order = clientOrderWorkReq.getOrder();
+//        if (!clientOrderWorkReq.getStatus().equals("Completed")) {
+//            CallDialog callDialog = new CallDialog(mainPanel, "Order not delivered to you yet", false);
+//            return;
+//        }
+//
+//        PathologyTestWR request = new PathologyTestWR();
+//        DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
+////        Produce produce = (Produce)model.getValueAt(selectedRow, 0);
+//        
+//        FitnessCenter fitnessCenter = (FitnessCenter) fitnesscenterPicker.getSelectedItem();
+//        request.setClient(client);
+//        System.out.println(client);
+//        request.setFitnessCenter(fitnessCenter);
+//        request.setTest(txtMessage.getText());
+//        request.setMessage(txtMessage.getText());
+//        request.setStatus("Sample sent");
+//        request.setTestResult("");
+//        
+//        fitnessCenter.getWorkQueue().getWorkRequestListArray2().add(request);
+//        userAccount.getWorkQueue().getWorkRequestListArray2().add(request);
+//        
+//        CallDialog callDialog = new CallDialog(mainPanel, "Sample sent successfully", true);
+//        
+//        populateTable();
 
     }//GEN-LAST:event_btnSendForTestingActionPerformed
 

@@ -62,7 +62,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             }
         }
         
-        ArrayList<Enterprise> warehouseEnterprises = new ArrayList();
+        ArrayList<Enterprise> countyEnterprises = new ArrayList();
         State net = null;
         int fl=0;
         for(State state: system.getStateList()){

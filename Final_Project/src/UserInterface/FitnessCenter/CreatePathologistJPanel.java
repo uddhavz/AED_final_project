@@ -494,7 +494,7 @@ public class CreatePathologistJPanel extends javax.swing.JPanel {
         btnDelete.setEnabled(true);
         btnModify.setEnabled(true);
         
-        CallDialog calldialog = new CallDialog(mainPanel, "Lab technician added successfully", true);
+        CallDialog calldialog = new CallDialog(mainPanel, "Pathologist added successfully", true);
     }
     
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
