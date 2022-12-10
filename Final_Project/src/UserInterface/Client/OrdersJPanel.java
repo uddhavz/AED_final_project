@@ -299,13 +299,13 @@ public class OrdersJPanel extends javax.swing.JPanel {
 
         PathologyTestWR request = new PathologyTestWR();
         DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
-        Produce produce = (Produce)model.getValueAt(selectedRow, 0);
+//        Produce produce = (Produce)model.getValueAt(selectedRow, 0);
         
         FitnessCenter fitnessCenter = (FitnessCenter) fitnesscenterPicker.getSelectedItem();
         request.setClient(client);
         System.out.println(client);
         request.setFitnessCenter(fitnessCenter);
-        request.setProduce(produce);
+        request.setTest(txtMessage.getText());
         request.setMessage(txtMessage.getText());
         request.setStatus("Sample sent");
         request.setTestResult("");
