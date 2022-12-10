@@ -104,7 +104,7 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Message", "Product", "Warehouse", "Status"
+                "Message", "Product", "Farmer", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {

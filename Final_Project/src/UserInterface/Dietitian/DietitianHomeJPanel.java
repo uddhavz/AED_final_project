@@ -26,10 +26,7 @@ import javax.swing.ImageIcon;
  * @author uddhavzambare
  */
 public class DietitianHomeJPanel extends javax.swing.JPanel {
-
-    /**
-     * Creates new form ApproveDoctorOptionsJPanel
-     */
+    
     EcoSystem system;
     Enterprise enterprise;
     UserAccount account;
@@ -40,8 +37,8 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
         this.account = account;
         this.enterprise = enterprise;
         initComponents();
-        setLogo();
-        setBackground();
+//        setLogo();
+//        setBackground();
         
         setModel();
     }
@@ -237,42 +234,42 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void setLogo() {
-        Image image = null;
-        try {
-            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        imgLogo.setIcon(icon);
-    }
-
-    private void setBackground() {
-
-        Image image = null;
-        try {
-            image = ImageIO.read(getClass().getResource("/UI/ConsultDoctor/doctorbg.jpeg"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        System.out.println(icon);
-        bgImage.setIcon(icon);
-    }
+//    private void setLogo() {
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        imgLogo.setIcon(icon);
+//    }
+//
+//    private void setBackground() {
+//
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UI/ConsultDietitian/deititianbg.jpeg"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        System.out.println(icon);
+//        bgImage.setIcon(icon);
+//    }
 
 
     private void btnApproveTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveTestActionPerformed
         // TODO add your handling code here:
 
-//        ApproveDoctorJPanel approveDoctorJPanel = new ApproveDoctorJPanel(account, fitnessCenter);
-//        ActivityJPanel.add("ApproveDoctorJPanel", approveDoctorJPanel);
-//        CardLayout layout = (CardLayout) ActivityJPanel.getLayout();
-//        layout.next(ActivityJPanel);
+        ApprovalDietitianJPanel approvalDietitianJPanel = new ApprovalDietitianJPanel(account, fitnessCenter);
+        ActivityJPanel.add("ApprovalDietitianJPanel", approvalDietitianJPanel);
+        CardLayout layout = (CardLayout) ActivityJPanel.getLayout();
+        layout.next(ActivityJPanel);
     }//GEN-LAST:event_btnApproveTestActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
@@ -286,10 +283,10 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
     private void btnConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultActionPerformed
         // TODO add your handling code here:
 
-//        ConsultDoctorJPanel consultDoctorJPanel = new ConsultDoctorJPanel(account, fitnessCenter);
-//        ActivityJPanel.add("ConsultDoctorJPanel", consultDoctorJPanel);
-//        CardLayout layout = (CardLayout) ActivityJPanel.getLayout();
-//        layout.next(ActivityJPanel);
+        ConsultDietitianJPanel consultDietitianJPanel = new ConsultDietitianJPanel(account, fitnessCenter);
+        ActivityJPanel.add("ConsultDietitianJPanel", consultDietitianJPanel);
+        CardLayout layout = (CardLayout) ActivityJPanel.getLayout();
+        layout.next(ActivityJPanel);
     }//GEN-LAST:event_btnConsultActionPerformed
 
 

@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author milindsharma
+ * @author uddhavzambare
  */
 public class ViewDietHistoryJPanel extends javax.swing.JPanel {
 
@@ -92,7 +92,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         lblTestKit = new javax.swing.JLabel();
         lblResult = new javax.swing.JLabel();
-        lblDoctorRemarks = new javax.swing.JLabel();
+        lblDRemarks = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         btnVIewResult = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -147,7 +147,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
 
         lblResult.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
 
-        lblDoctorRemarks.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblDRemarks.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout viewPanelLayout = new javax.swing.GroupLayout(viewPanel);
         viewPanel.setLayout(viewPanelLayout);
@@ -165,7 +165,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblDoctorRemarks, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+                            .addComponent(lblDRemarks, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
                             .addComponent(lblTestKit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -186,7 +186,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(lblDoctorRemarks, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblDRemarks, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -314,7 +314,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         PathologyTestWR request = (PathologyTestWR) tblRequest.getValueAt(selectedRow, 0);
         lblTestKit.setText(request.getTest());
         lblResult.setText(request.getTestResult());
-        lblDoctorRemarks.setText(request.getRemark());
+        lblDRemarks.setText(request.getRemark());
         
         
         viewPanel.setVisible(true);
@@ -375,7 +375,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblDoctorRemarks;
+    private javax.swing.JLabel lblDRemarks;
     private javax.swing.JLabel lblName1;
     private javax.swing.JLabel lblResult;
     private javax.swing.JLabel lblTestKit;

@@ -207,7 +207,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
     private void btnCreateDietitianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDietitianActionPerformed
         // TODO add your handling code here:
         CreateDietitianJPanel crdietJPanel = new CreateDietitianJPanel(enterprise);
-        ActivityJPanel.add("CreateDoctorJPanel", crdietJPanel);
+        ActivityJPanel.add("CreateDietitianJPanel", crdietJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
     }//GEN-LAST:event_btnCreateDietitianActionPerformed

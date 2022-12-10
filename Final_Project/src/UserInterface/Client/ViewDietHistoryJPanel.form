@@ -148,7 +148,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="lblResult" max="32767" attributes="0"/>
-                                  <Component id="lblDoctorRemarks" pref="304" max="32767" attributes="0"/>
+                                  <Component id="lblDRemarks" pref="304" max="32767" attributes="0"/>
                                   <Component id="lblTestKit" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -176,7 +176,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblDoctorRemarks" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="lblDRemarks" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -232,7 +232,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblDoctorRemarks">
+            <Component class="javax.swing.JLabel" name="lblDRemarks">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Devanagari MT" size="14" style="0"/>

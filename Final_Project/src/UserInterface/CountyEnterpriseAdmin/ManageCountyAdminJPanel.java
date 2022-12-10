@@ -21,7 +21,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
 
     private Enterprise enterprise;
     
-    /**
+    /** 
      * Creates new form ManageCountyAdminJPanel
      */
     public ManageCountyAdminJPanel(Enterprise enterprise) {
@@ -480,7 +480,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
         county.getUserAccountDirectory().removeUser(us);
         populateTable(county);
 
-        CallDialog callDialog = new CallDialog(mainPanel, "Manufacturing warehouse admin deleted successfully", true);
+        CallDialog callDialog = new CallDialog(mainPanel, "Farmer removed successfully", true);
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void countyPickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countyPickerActionPerformed
@@ -547,7 +547,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
             txtAdminName.setText("");
             btnDelete.setEnabled(true);
             btnModify.setEnabled(true);
-            CallDialog callDialog = new CallDialog(mainPanel, "Manufacturing warehouse admin added successfully", true);
+            CallDialog callDialog = new CallDialog(mainPanel, "Farmer added successfully", true);
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
 

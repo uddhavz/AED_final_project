@@ -403,7 +403,7 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
         } 
 //        else if (!isValidName) {
 //            isValid = false;
-//            hideShowValidation(lblDoctorNameValidation, "Please enter name in correct format");
+//            hideShowValidation(lblDietitianNameValidation, "Please enter name in correct format");
 //
 //        }
         if (txtUserName.getText().isEmpty()) {
@@ -518,8 +518,8 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblDietitian.getModel();
         model.setRowCount(0);
         //String dm = "Business.Role.LabAdminRole";
-//        String approveDoc = "Approving Doctor";
-//        String consultDoc = "Consulting Doctor";
+//        String approveDoc = "Approving Dietitian";
+//        String consultDoc = "Consulting Dietitian";
 
 //        for (UserAccount userAcc : fitnesscenter.getUserAccountDirectory().getUserAccountList()) {
 //            if (userAcc.getRole().toString().equals(approveDoc) || userAcc.getRole().toString().equals(consultDoc)) {
