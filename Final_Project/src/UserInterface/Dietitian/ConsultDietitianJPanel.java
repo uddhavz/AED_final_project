@@ -6,7 +6,10 @@
 package UserInterface.Dietitian;
 
 import Business.Client.Client;
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
 import Business.FitnessCenter.FitnessCenter;
+import Business.State.State;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.DietitianWR;
 import Business.WorkQueue.PathologyTestWR;
@@ -31,22 +34,32 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
     private UserAccount account;
     private FitnessCenter fitnessCenter;
     DietitianWR request;
+    EcoSystem system;
     Client clientinfo;
+    UserAccount clientUA;
 
     public ConsultDietitianJPanel(UserAccount account, FitnessCenter fitnessCenter) {
         initComponents();
         this.account = account;
         this.fitnessCenter = fitnessCenter;
+//        this.system = ecosystem;
+        
         populateTable();
+        populatePicker();
         
         panelProcessOrder.setVisible(false);
         lblTestValidation.setVisible(false);
         lblRemarksValidation.setVisible(false);
         
+        
+        
         DefaultTableModel model = (DefaultTableModel) tblIssues.getModel();
         model.setRowCount(0);
     }
-
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,7 +92,6 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
         lblTestValidation = new javax.swing.JLabel();
         lblRemarksValidation = new javax.swing.JLabel();
         btnSendForTesting = new javax.swing.JButton();
-        btnSubmit = new javax.swing.JButton();
         labPathologist = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
 
@@ -243,7 +255,7 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
                         .addComponent(Enterprises1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         panelProcessOrder.setBackground(new java.awt.Color(255, 255, 255));
@@ -293,17 +305,6 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
-        btnSubmit.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
-        btnSubmit.setText("Submit");
-        btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnSubmit.setBorderPainted(false);
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
-            }
-        });
-
         labPathologist.setBackground(new java.awt.Color(79, 173, 177));
         labPathologist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -319,26 +320,26 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelProcessOrderLayout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(panelProcessOrderLayout.createSequentialGroup()
                         .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblName2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblName1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblRemarksValidation)
+                        .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelProcessOrderLayout.createSequentialGroup()
+                                .addComponent(lblTestValidation)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblRemarksValidation)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSendForTesting, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(labPathologist, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtRemarks, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtTest, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnSendForTesting, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblTestValidation))
-                        .addGap(610, 610, 610))
-                    .addGroup(panelProcessOrderLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(panelProcessOrderLayout.createSequentialGroup()
-                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 1099, Short.MAX_VALUE))))
+                                .addComponent(txtTest, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(610, 610, 610))))
         );
 
         panelProcessOrderLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel3, lblName1, lblName2});
@@ -350,27 +351,27 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblName1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTest, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelProcessOrderLayout.createSequentialGroup()
-                        .addComponent(lblName1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(lblName2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(1, 1, 1)
+                        .addComponent(lblName2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRemarks, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelProcessOrderLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
                         .addComponent(jLabel3))
-                    .addGroup(panelProcessOrderLayout.createSequentialGroup()
-                        .addComponent(txtTest, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
+                    .addComponent(labPathologist, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblTestValidation, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtRemarks, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblRemarksValidation, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labPathologist, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30)
-                .addComponent(btnSendForTesting, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                        .addComponent(lblRemarksValidation, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSendForTesting, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         panelProcessOrderLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel3, lblName1, lblName2});
@@ -398,10 +399,10 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
                 .addGap(30, 30, 30)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(548, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelProcessOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(645, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -410,7 +411,7 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1530, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1530, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -488,6 +489,8 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             row[0] = req;
             row[1] = req.getClient().getEmployee().getName();
             row[2] = req.getStatus();
+//            clientUA = req.getSender();
+//            System.out.println("Client Meet Diet --> "+clientUA);
 
             model.addRow(row);
         }
@@ -533,24 +536,6 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnViewIssuesActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        
-        if (isValidData()) {
-            
-            request.setTest(txtTest.getText());
-            request.setMessage(txtRemarks.getText());
-            request.setStatus("Done");
-            panelProcessOrder.setVisible(false);
-            populateTable();
-            DefaultTableModel model = (DefaultTableModel) tblIssues.getModel();
-            model.setRowCount(0);
-            
-            CallDialog message = new CallDialog(mainPanel, "Test suggested successfully", true);
-        }
-        
-
-    }//GEN-LAST:event_btnSubmitActionPerformed
-
     private void txtTestFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtTestFocusGained
         // TODO add your handling code here:
         lblTestValidation.setVisible(false);
@@ -564,45 +549,36 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
     private void btnSendForTestingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendForTestingActionPerformed
         // TODO add your handling code here:
 
-//        int selectedRow = tblOrders.getSelectedRow();
-//        if (selectedRow < 0){
-//            CallDialog callDialog = new CallDialog(mainPanel, "Please select a row to send", false);
-//            return;
-//        }
+      int selectedRow = tblClientStatus.getSelectedRow();
+        if (selectedRow < 0) {
+            CallDialog cd = new CallDialog(mainPanel, "Please select a row to assign", false);
+            return;
+        }  
+        PathologyTestWR patrq = new PathologyTestWR();
+        System.out.println(request.getStatus());
 
-//        ArrayList<WorkRequest> workReq = userAccount.getWorkQueue().getWorkRequestListArray();
-//        ClientOrderWR clientOrderWorkReq = null;
-//        try {
-//            clientOrderWorkReq = (ClientOrderWR)workReq.get(selectedRow);
-//        }
-//        catch(Exception e){
-//
-//        }
-//
-//        Order order = clientOrderWorkReq.getOrder();
-//        if (!clientOrderWorkReq.getStatus().equals("Completed")) {
-//            CallDialog callDialog = new CallDialog(mainPanel, "Order not delivered to you yet", false);
-//            return;
-//        }
-
-        PathologyTestWR request = new PathologyTestWR();
-//        DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
-//        Produce produce = (Produce)model.getValueAt(selectedRow, 0);
-//
-//        FitnessCenter fitnessCenter = (FitnessCenter) fitnesscenterPicker.getSelectedItem();
         
-        if (request.getStatus().equals("Sent to fitness center")) {
+//        PathologyTestWR request = (PathologyTestWR) tblClientStatus.getValueAt(selectedRow, 0);
+        if (request.getStatus().equals("Pending Suggestion")) {
             
             UserAccount ua1 = (UserAccount)labPathologist.getSelectedItem();
+            patrq.setMessage(txtRemarks.getText());
+            patrq.setClient(clientinfo);
+            patrq.setTest(txtTest.getText());
+            patrq.setFitnessCenter(fitnessCenter);
+            patrq.setTestResult("");
+//            patrq.setReceiver(ua1);
+            patrq.setStatus("Sent for testing");
             request.setMessage(txtRemarks.getText());
             request.setClient(clientinfo);
             request.setTest(txtTest.getText());
-            System.out.println(clientinfo);
-            request.setFitnessCenter(fitnessCenter);
-            request.setTestResult("");
+            request.setFitnessCenterName(fitnessCenter);
             request.setReceiver(ua1);
-            request.setStatus("Sent for testing");
+            clientUA = request.getSender();
+            System.out.println("Inside loop UA : "+request.getSender());
+//            request.setStatus("Check diet History for updates");
             populateTable();
+            
             
             CallDialog callDialog = new CallDialog(mainPanel, "Sample sent successfully", true);
         } else {
@@ -610,8 +586,8 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
   
         }
 
-        fitnessCenter.getWorkQueue().getWorkRequestListArray2().add(request);
-        account.getWorkQueue().getWorkRequestListArray2().add(request);
+        fitnessCenter.getWorkQueue().getWorkRequestListArray2().add(patrq);
+        clientUA.getWorkQueue().getWorkRequestListArray2().add(patrq);
         populateTable();
     }//GEN-LAST:event_btnSendForTestingActionPerformed
 
@@ -647,7 +623,6 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Enterprises1;
     private javax.swing.JButton btnSendForTesting;
-    private javax.swing.JButton btnSubmit;
     private javax.swing.JButton btnSuggestTest;
     private javax.swing.JButton btnViewIssues;
     private javax.swing.JLabel jLabel1;
@@ -677,4 +652,19 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
         txtTest.setText("");
         txtRemarks.setText("");
     }
+    
+    
+    
+    private void populatePicker(){
+        labPathologist.removeAllItems();
+        
+        String role = "Pathologist";
+        
+        for (UserAccount ua:fitnessCenter.getUserAccountDirectory().getUserAccountList()) {
+            if (ua.getRole().toString().equals(role)) {
+                labPathologist.addItem(ua);
+            }
+        }
+    }
+
 }

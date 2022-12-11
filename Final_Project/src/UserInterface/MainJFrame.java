@@ -25,6 +25,7 @@ import UserInterface.FNS.FNSAdminJPanel;
 import UserInterface.FNSEnterpriseAdmin.FNSEnterpriseManageJPanel;
 import UserInterface.FitnessCenter.FitnessCenterEnterpriseAdminHomeJPanel;
 import UserInterface.InventoryManager.InventoryManagerHomeJpanel;
+import UserInterface.Pathologist.PathologistHomeJPanel;
 import UserInterface.Shipping.ShippingHomeJPanel;
 import UserInterface.VendorEnterpriseAdmin.VendorEnterpriseAdminOptionsJPanel;
 import java.awt.CardLayout;
@@ -473,7 +474,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 mainJPanel.add("CountyOptionsJPanel", CountyHomeJPanel);
                 break;
                 
-            case "Deliver Person":
+            case "Delivery Person":
                 DeliveryPartnerHomeJPanel DeliveryHomeJPanel = new DeliveryPartnerHomeJPanel(system,userAccount, enterprise);
                 mainJPanel.add("DeliveryPartnerHomeJPanel", DeliveryHomeJPanel);
                 break;
@@ -503,15 +504,15 @@ public class MainJFrame extends javax.swing.JFrame {
                 mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
                 break;
             
-//            case "Nutrtion Analyst":
+//           case "Nutrtion Analyst":
 //                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);
 //                mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
 //                break;
                 
-//            case "Pathologist":
-//                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);
-//                mainJPanel.add("InventoryManagerHomeJPanel", InventoryManagerHJPanel);
-//                break; 
+            case "Pathologist":
+                 PathologistHomeJPanel pathologistHomeJPanel = new PathologistHomeJPanel(system,  userAccount,enterprise);
+                mainJPanel.add("PathologistHomeJPanel", pathologistHomeJPanel);
+                break; 
                 
 //             case "Quality Approver":
 //                InventoryManagerHomeJpanel InventoryManagerHJPanel = new InventoryManagerHomeJpanel(system, enterprise, userAccount);

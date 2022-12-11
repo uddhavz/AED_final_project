@@ -40,7 +40,7 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
     private void populateDeliveryPicker(){
         shippingPartnerPicker.removeAllItems();
         
-        String role = "Shipping Partner";
+        String role = "Shipping Manager";
         
         for (UserAccount ua: county.getUserAccountDirectory().getUserAccountList()) {
             if (ua.getRole().toString().equals(role)) {

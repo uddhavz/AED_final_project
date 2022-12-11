@@ -286,12 +286,8 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         }
 
         WorkRequest request = (WorkRequest) tblOrders.getValueAt(selectedRow, 0);
-        if(request.getStatus().equals("Customer order placed")){
-            request.setStatus("Customer Order Accepted");
-            CallDialog calldialog = new CallDialog(mainPanel, "Order accepted successfully", true);
-
-        } else if (request.getStatus().equals("Retail Order placed")){
-            request.setStatus("Retail Order Accepted");
+        if(request.getStatus().equals("Client order placed")){
+            request.setStatus("Order Accepted");
             CallDialog calldialog = new CallDialog(mainPanel, "Order accepted successfully", true);
 
         } else {
@@ -309,13 +305,9 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         }
 
         WorkRequest request = (WorkRequest) tblOrders.getValueAt(selectedRow, 0);
-        if(request.getStatus().equals("Customer order placed")){
+        if(request.getStatus().equals("Client order placed")){
             request.setStatus("Rejected");
-            CallDialog calldialog = new CallDialog(mainPanel, "Order rejected successfully", true);
-
-        } else if (request.getStatus().equals("Retail Order placed")){
-            request.setStatus("Rejected");
-            CallDialog calldialog = new CallDialog(mainPanel, "Order rejected successfully", true);
+            CallDialog calldialog = new CallDialog(mainPanel, "Order rejected", true);
 
         } else {
             CallDialog calldialog = new CallDialog(mainPanel, "Order cannot be accepted/rejected", false);
@@ -325,6 +317,8 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
 
     private void btnAssignDeliveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignDeliveryActionPerformed
         // TODO add your handling code here:
+        
+        
         int selectedRow = tblOrders.getSelectedRow();
         if (selectedRow < 0) {
             CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to assign", false);
@@ -332,36 +326,32 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         }
 
         String value = tblOrders.getModel().getValueAt(selectedRow, 4).toString();
+        ClientOrderWR request = (ClientOrderWR) tblOrders.getValueAt(selectedRow, 0);
+        if (request.getStatus().equals("Order Accepted")) {
+            
 
-        if (value.contains("Retail")) {
-            CallDialog calldialog = new CallDialog(mainPanel, "Please assign this order to pharmacy delivery partner", false);
+            UserAccount ua = (UserAccount)deliveryPicker.getSelectedItem();
+            request.setReceiver(ua);
+            request.setStatus("On the way");
+            populateTable();
+
+            CallDialog calldialog = new CallDialog(mainPanel, "Order assigned successfully", true);
+
+        } else if (request.getStatus().equals("Client order placed")) {
+            CallDialog calldialog = new CallDialog(mainPanel, "Please accept the order first", false);
 
         } else {
-            ClientOrderWR request = (ClientOrderWR) tblOrders.getValueAt(selectedRow, 0);
-            if (request.getStatus().equals("Customer Order Accepted")) {
+            CallDialog calldialog = new CallDialog(mainPanel, "Order cannot be assigned", false);
 
-                UserAccount ua = (UserAccount)deliveryPicker.getSelectedItem();
-                request.setReceiver(ua);
-                request.setStatus("On the way");
-                populateTable();
-
-                CallDialog calldialog = new CallDialog(mainPanel, "Order assigned successfully", true);
-
-            } else if (request.getStatus().equals("Customer order placed")) {
-                CallDialog calldialog = new CallDialog(mainPanel, "Please accept the order first", false);
-
-            } else {
-                CallDialog calldialog = new CallDialog(mainPanel, "Order cannot be assigned", false);
-
-            }
         }
+ 
 
     }//GEN-LAST:event_btnAssignDeliveryActionPerformed
     
     private void populateDeliveryPicker(){
         deliveryPicker.removeAllItems();
         
-        String role = "Delivery Man";
+        String role = "Delivery Person";
         
         for (UserAccount ua: vendor.getUserAccountDirectory().getUserAccountList()) {
             if (ua.getRole().toString().equals(role)) {

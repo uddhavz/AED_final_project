@@ -40,7 +40,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.account = account;
         initComponents();
-//        setModel();
+        setModel();
 //        setLogo();
 //        setBackground();
     }
@@ -78,7 +78,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             }
         }
         for(Enterprise ent:net.getEnterpriseDirectory().getEnterpriseListArray()){
-            if(ent.getEnterpriseType().getValue().equals("Inventory Manager Unit")){
+            if(ent.getEnterpriseType().getValue().equals("County")){
                 countyEnterpriseArray.add(ent);
             }
         }
@@ -177,39 +177,45 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         OptionsJPanel.setLayout(OptionsJPanelLayout);
         OptionsJPanelLayout.setHorizontalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 248, Short.MAX_VALUE)
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
-                        .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE))
+                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
+
+        OptionsJPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAssignDeliveryPartner, btnPlaceShippingOrder, btnViewOrderHistory});
+
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 911, Short.MAX_VALUE)
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(945, Short.MAX_VALUE))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                    .addGap(126, 126, 126)
-                    .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 494, Short.MAX_VALUE)
+                    .addContainerGap(1033, Short.MAX_VALUE)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(127, 127, 127)))
         );
+
+        OptionsJPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAssignDeliveryPartner, btnPlaceShippingOrder, btnViewOrderHistory});
 
         jSplitPane1.setLeftComponent(OptionsJPanel);
 
         ActivityJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ActivityJPanel.setLayout(new java.awt.CardLayout());
-
-        jLabel1.setText("jLabel1");
         ActivityJPanel.add(jLabel1, "card2");
 
         jSplitPane1.setRightComponent(ActivityJPanel);
@@ -218,17 +224,11 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1)
-                .addContainerGap())
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1)
-                .addContainerGap())
+            .addComponent(jSplitPane1)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -255,7 +255,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         InventoryManagerAssignDeliveryJPanel manageShippingPartnerJPanel = new InventoryManagerAssignDeliveryJPanel(account, countyEnterpriseArray, vendor);
-        ActivityJPanel.add("ManagerAssignDeliveryJPanel", manageShippingPartnerJPanel);
+        ActivityJPanel.add("InventoryManagerAssignDeliveryJPanel", manageShippingPartnerJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
     }//GEN-LAST:event_btnAssignDeliveryPartnerActionPerformed

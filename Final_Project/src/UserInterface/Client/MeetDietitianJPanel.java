@@ -30,7 +30,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
     EcoSystem system;
     UserAccount userAccount;
     Client client;
-    ArrayList<String> symptoms;
+    ArrayList<String> issues;
 
     public MeetDietitianJPanel(UserAccount userAccount, EcoSystem system, Client client) {
         initComponents();
@@ -39,9 +39,9 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.client = client;
         populateJComboBox();
-        symptoms = new ArrayList();
+        issues = new ArrayList();
         populateHistoryTable();
-        DefaultTableModel model = (DefaultTableModel) tblSymptoms.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblIssues.getModel();
         model.setRowCount(0);
         
         lblAddVisitReasonValidation.setVisible(false);
@@ -88,7 +88,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
         for (UserAccount us : fitnessCenter.getUserAccountDirectory().getUserAccountList()) {
-            if (us.getRole().toString().equals("Consulting Dietitian")) {
+            if (us.getRole().toString().equals("Dietitian")) {
                 Object[] row = new Object[1];
                 row[0] = us;
                 model.addRow(row);
@@ -124,7 +124,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDietitian = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tblSymptoms = new javax.swing.JTable();
+        tblIssues = new javax.swing.JTable();
 
         mainPanel.setBackground(new java.awt.Color(79, 173, 177));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
@@ -280,7 +280,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
             tblDietitian.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        tblSymptoms.setModel(new javax.swing.table.DefaultTableModel(
+        tblIssues.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -299,8 +299,8 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblSymptoms.setRowSelectionAllowed(false);
-        jScrollPane3.setViewportView(tblSymptoms);
+        tblIssues.setRowSelectionAllowed(false);
+        jScrollPane3.setViewportView(tblIssues);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -400,17 +400,17 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
 
     private void btnConsultDietitianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultDietitianActionPerformed
 
-        DefaultTableModel model = (DefaultTableModel) tblSymptoms.getModel();
-        int noOfSymptoms = model.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) tblIssues.getModel();
+        int noOfIssues = model.getRowCount();
         
-        if (noOfSymptoms == 0) {
-            CallDialog callDialog = new CallDialog(mainPanel, "Please add symptoms first", false);
+        if (noOfIssues == 0) {
+            CallDialog callDialog = new CallDialog(mainPanel, "Please add issue first", false);
             return;
         }
         
         FitnessCenter fitnessCenter = (FitnessCenter)centerPicker.getSelectedItem();
         DietitianWR request = new DietitianWR();
-        for(String s:symptoms){
+        for(String s:issues){
             request.addIssue(s);
         }
         request.setClient(client);
@@ -419,8 +419,10 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         request.setStatus("Sent to fitness center");
         request.setSender(userAccount);
         userAccount.getWorkQueue().getWorkRequestListArray3().add(request);
+        System.out.println("userAccount.getWorkQueue().getWorkRequestListArray3() -->" +userAccount.getWorkQueue().getWorkRequestListArray3());
         fitnessCenter.getWorkQueue().getWorkRequestListArray3().add(request);
         populateHistoryTable();
+        System.out.println("Client Meet Diet --> "+request.getSender());
         CallDialog callDialog = new CallDialog(mainPanel, "Your consult request is successfully sent to the fitnessCenter", true);
     }//GEN-LAST:event_btnConsultDietitianActionPerformed
 
@@ -433,8 +435,8 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         if (isValidData()) {
-            symptoms.add(txtAddVisitReason.getText());
-            DefaultTableModel model = (DefaultTableModel) tblSymptoms.getModel();
+            issues.add(txtAddVisitReason.getText());
+            DefaultTableModel model = (DefaultTableModel) tblIssues.getModel();
             Object row[] = new Object[1];
             row[0] = txtAddVisitReason.getText();
             model.addRow(row);
@@ -487,7 +489,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTable tblDietitian;
     private javax.swing.JTable tblHistory;
-    private javax.swing.JTable tblSymptoms;
+    private javax.swing.JTable tblIssues;
     private javax.swing.JTextField txtAddVisitReason;
     // End of variables declaration//GEN-END:variables
 }

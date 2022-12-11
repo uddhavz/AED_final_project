@@ -57,11 +57,11 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
         ArrayList<WorkRequest> workReq = userAccount.getWorkQueue().getWorkRequestListArray2();
-        
+        System.out.println(workReq);
         for (int i = workReq.size() - 1; i >= 0; i--){
             
             PathologyTestWR testReq = (PathologyTestWR)workReq.get(i);
-            
+            System.out.println("testReq --->" + testReq);
                 Object[] row = new Object[5];
                 row[0] = testReq;
                 row[1] = testReq.getRemark();
