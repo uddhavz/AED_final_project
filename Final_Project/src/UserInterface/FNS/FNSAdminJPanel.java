@@ -5,6 +5,7 @@
 package UserInterface.FNS;
 
 //import Business.DB4OUtil.DB4OUtil;
+import Business.DB4OUtil.DB4OUtil;
 import Business.Vendor.Vendor;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -83,10 +84,11 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
             }
         }
         for(Enterprise ent:flag.getEnterpriseDirectory().getEnterpriseListArray()){
-            if(ent.getEnterpriseType().getValue().equals("Agriculture Unit")){
+            if(ent.getEnterpriseType().getValue().equals("County")){
                 countyEnterpriseArray.add(ent);
             }
         }
+        System.out.println(countyEnterpriseArray);
     }
     
 //    private void setLogo() {
@@ -333,10 +335,10 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-//        DB4OUtil.getInstance().storeSystem(system);
-//        MainJFrame.mainPanel.remove(this);
-//        CardLayout layout = (CardLayout) MainJFrame.mainPanel.getLayout();
-//        layout.first(MainJFrame.mainPanel);
+        DB4OUtil.getInstance().storeSystem(system);
+        MainJFrame.mainPanel.remove(this);
+        CardLayout layout = (CardLayout) MainJFrame.mainPanel.getLayout();
+        layout.first(MainJFrame.mainPanel);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
 
