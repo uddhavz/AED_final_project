@@ -24,17 +24,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="1440" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="1350" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="mainPanel" alignment="1" pref="1440" max="32767" attributes="0"/>
+              <Component id="mainPanel" alignment="1" pref="1350" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="925" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="900" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="mainPanel" alignment="0" pref="925" max="32767" attributes="0"/>
+              <Component id="mainPanel" alignment="0" pref="900" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,33 +53,8 @@
         <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,51,0,0,2,-123"/>
       </AuxValues>
 
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jPanel4" alignment="0" pref="1165" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="269" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="401" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPanel2">
@@ -96,6 +71,11 @@
               <Dimension value="[1165, 106]"/>
             </Property>
           </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="80" y="40" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -140,6 +120,11 @@
               </Border>
             </Property>
           </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="80" y="360" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -194,7 +179,7 @@
                   <Color blue="b1" green="ad" red="4f" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Devanagari MT" size="14" style="1"/>
+                  <Font name="Myanmar MN" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -211,7 +196,7 @@
             <Component class="javax.swing.JLabel" name="lblName1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Devanagari MT" size="14" style="0"/>
+                  <Font name="Myanmar MN" size="14" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Enter State Name:"/>
               </Properties>
@@ -219,7 +204,7 @@
             <Component class="javax.swing.JTextField" name="txtStateName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Helvetica" size="14" style="0"/>
+                  <Font name="Myanmar MN" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -231,7 +216,7 @@
             <Component class="javax.swing.JLabel" name="lblStateNameValidation">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Helvetica Neue" size="12" style="0"/>
+                  <Font name="Myanmar MN" size="12" style="0"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="0" red="ff" type="rgb"/>
@@ -242,7 +227,7 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Devanagari MT" size="24" style="1"/>
+                  <Font name="Myanmar MN" size="24" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add State"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -262,6 +247,11 @@
               </Border>
             </Property>
           </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="80" y="170" width="1165" height="-1"/>
+            </Constraint>
+          </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -298,6 +288,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblStates">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Myanmar MN" size="13" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="1" rowCount="4">
                         <Column editable="false" title="State Name" type="java.lang.String"/>
@@ -323,7 +316,7 @@
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Devanagari MT" size="24" style="1"/>
+                  <Font name="Myanmar MN" size="24" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="States"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>

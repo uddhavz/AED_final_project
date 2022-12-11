@@ -134,7 +134,7 @@ public class MeetDietitianJPanel extends javax.swing.JPanel {
         jPanel2.setPreferredSize(new java.awt.Dimension(1165, 106));
 
         jLabel1.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
-        jLabel1.setText("Send details to Fitness Center");
+        jLabel1.setText("Send Details to Fitness Center");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

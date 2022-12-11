@@ -123,6 +123,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         mainPanel.setBackground(new java.awt.Color(79, 173, 177));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
+        mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -137,7 +138,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(350, 350, 350)
                 .addComponent(jLabel1)
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addContainerGap(296, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,6 +147,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        mainPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 1230, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -164,14 +167,14 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         lblName1.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblName1.setText("Enter Username:");
 
-        txtUsername.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
+        txtUsername.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         txtUsername.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtUsernameFocusGained(evt);
             }
         });
 
-        lblUsernameValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblUsernameValidation.setFont(new java.awt.Font("Malayalam MN", 0, 12)); // NOI18N
         lblUsernameValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblUsernameValidation.setText("jLabel2");
 
@@ -185,6 +188,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel3.setText("Choose State:");
 
         statePicker.setBackground(new java.awt.Color(79, 173, 177));
+        statePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         statePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         statePicker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,30 +201,31 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel4.setText("Choose Enterprise: ");
 
         enterprisePicker.setBackground(new java.awt.Color(79, 173, 177));
-        enterprisePicker.setFont(new java.awt.Font("Devanagari MT", 0, 13)); // NOI18N
+        enterprisePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         enterprisePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lblName2.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblName2.setText("Enter Password:");
 
-        lblPasswordValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblPasswordValidation.setFont(new java.awt.Font("Malayalam MN", 0, 12)); // NOI18N
         lblPasswordValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblPasswordValidation.setText("jLabel2");
 
         lblName3.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblName3.setText("Enter Name:");
 
-        txtName.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         txtName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtNameFocusGained(evt);
             }
         });
 
-        lblNameValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblNameValidation.setFont(new java.awt.Font("Malayalam MN", 0, 12)); // NOI18N
         lblNameValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblNameValidation.setText("jLabel2");
 
+        txtPassword.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         txtPassword.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtPasswordFocusGained(evt);
@@ -309,6 +314,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {enterprisePicker, jLabel3, jLabel4, lblName1, lblName2, lblName3, statePicker, txtName, txtPassword});
 
+        mainPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
@@ -317,6 +324,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         Enterprises.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Enterprises.setIconTextGap(0);
 
+        enterpriseJTable.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -346,7 +354,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Enterprises, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Enterprises, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -360,45 +368,21 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mainPanelLayout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(492, Short.MAX_VALUE))
-        );
+        mainPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, -1, 342));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1417, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1417, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 973, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 973, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
