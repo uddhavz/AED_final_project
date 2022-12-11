@@ -115,7 +115,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Myanmar MN" size="36" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Send details to Fitness Center"/>
+                <Property name="text" type="java.lang.String" value="Send Details to Fitness Center"/>
               </Properties>
             </Component>
           </SubComponents>
