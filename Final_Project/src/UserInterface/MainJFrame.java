@@ -288,10 +288,13 @@ public class MainJFrame extends javax.swing.JFrame {
                 //Step 2.a: check against each enterprise
                 for(Enterprise enterprise:state.getEnterpriseDirectory().getEnterpriseListArray()){
                     userAccount=enterprise.getUserAccountDirectory().authentication(userName, password);
+                    System.out.println("#"+userAccount);
                     if(userAccount==null){
                         //Step 3:check against each organization for each enterprise
                         for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
                             userAccount=organization.getUserAccountDirectory().authentication(userName, password);
+                            System.out.println("##"+userAccount);
+                            System.out.println("inOrganization - > "+ inOrganization);
                             if(userAccount!=null){
                                 inEnterprise=enterprise;
                                 inOrganization=organization;
@@ -302,6 +305,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     }
                     else{
                         inEnterprise=enterprise;
+                        System.out.println("inEnterprise - > "+inEnterprise);
                         break;
                     }
                     if(inOrganization!=null){
@@ -317,12 +321,14 @@ public class MainJFrame extends javax.swing.JFrame {
 
         if(userAccount==null){
             for(State state:system.getStateList()){
+                System.out.println("State -> "+ state);
                 for(Enterprise enterprise:state.getEnterpriseDirectory().getEnterpriseListArray()){
-                    
+                    System.out.println("Enterprise - >"+ enterprise);
                     if(enterprise.getFitnesscenterDirectory()!=null){
                         for(FitnessCenter fitnesscenter: enterprise.getFitnesscenterDirectory().getFitnessCentersArray()){
                             userAccount = fitnesscenter.getUserAccountDirectory().authentication(userName, password);
-                            System.out.println(userAccount);
+                            System.out.println("1 **"+enterprise.getName());
+                            System.out.println("1 userAccount **"+userAccount);
                             if(userAccount!=null){
                                 System.out.println(userAccount+": FitnessCenter");
                                 inEnterprise=enterprise;
@@ -330,11 +336,14 @@ public class MainJFrame extends javax.swing.JFrame {
                                 break;
                             }
                         }
+                        
                     }
                     if(enterprise.getCountyDirectory()!=null){
                         for(County c: enterprise.getCountyDirectory().getCountyDirectoryArray()){
                             userAccount = c.getUserAccountDirectory().authentication(userName, password);
-                            System.out.println(enterprise.getName());
+                            System.out.println("2 **"+enterprise.getName());
+                            System.out.println("2 userAccount **"+userAccount);
+                            
                             if(userAccount!=null){
                                 System.out.println(userAccount+": County");
                                 inEnterprise=enterprise;
@@ -343,11 +352,15 @@ public class MainJFrame extends javax.swing.JFrame {
                                 break;
                             }
                         }
+                        if(userAccount!=null){
+                            break;
+                        }
                     }
                     if(enterprise.getVendorDirectory()!=null){
                         for(Vendor vendor: enterprise.getVendorDirectory().getVendorsArray()){
                             userAccount = vendor.getUserAccountDirectory().authentication(userName, password);
-                            System.out.println(enterprise.getName());
+                            System.out.println("3 **"+enterprise.getName());
+                            System.out.println("3 userAccount **"+userAccount);
                             if(userAccount!=null){
                                 System.out.println(userAccount+": Vendor");
                                 inEnterprise=enterprise;
@@ -359,6 +372,8 @@ public class MainJFrame extends javax.swing.JFrame {
                     if(enterprise.getFnsDirectory()!=null){
                         for(FNS fns: enterprise.getFnsDirectory().getFNS()){
                             userAccount = fns.getUserAccountDirectory().authentication(userName, password);
+                            System.out.println("4 **"+enterprise.getName());
+                            System.out.println("4 userAccount **"+userAccount);
                             if(userAccount!=null){
                                 System.out.println(userAccount+": Food and Nutrition Service");
                                 inEnterprise=enterprise;
@@ -373,6 +388,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
             }
         }
+        System.out.println("Final User  - >" + userAccount );
         if (userAccount != null) {
             navigateAfterLogin(userAccount, inEnterprise, county);
         } else {

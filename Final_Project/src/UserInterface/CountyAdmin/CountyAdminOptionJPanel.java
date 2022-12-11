@@ -37,37 +37,37 @@ public class CountyAdminOptionJPanel extends javax.swing.JPanel {
         this.county = county;
         this.system = system;
         
-        setLogo();
-        setBackground();
+//        setLogo();
+//        setBackground();
     }
     
-    private void setLogo() {
-        Image image = null;
-        try {
-            image = ImageIO.read(getClass().getResource("/UserInterface/filename.png"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        imgLogo.setIcon(icon);
-    }
-    
-    private void setBackground() {
-        
-        Image image = null;
-        try {
-                image = ImageIO.read(getClass().getResource("/UserInterface/CountyEnterpriseAdmin/filenamebg.jpeg"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
-        ImageIcon icon = new ImageIcon(scaledImg);
-        System.out.println(icon);
-        bgImage.setIcon(icon);
-    }
+//    private void setLogo() {
+//        Image image = null;
+//        try {
+//            image = ImageIO.read(getClass().getResource("/UserInterface/filename.png"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        imgLogo.setIcon(icon);
+//    }
+//    
+//    private void setBackground() {
+//        
+//        Image image = null;
+//        try {
+//                image = ImageIO.read(getClass().getResource("/UserInterface/CountyEnterpriseAdmin/filenamebg.jpeg"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        Image scaledImg = image.getScaledInstance(1180, 930, Image.SCALE_SMOOTH);
+//        ImageIcon icon = new ImageIcon(scaledImg);
+//        System.out.println(icon);
+//        bgImage.setIcon(icon);
+//    }
     
 
     /**

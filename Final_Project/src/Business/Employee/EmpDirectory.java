@@ -26,6 +26,7 @@ public class EmpDirectory {
         Emp emp = new Emp();
         emp.setName(empName);
         empArray.add(emp);
+        System.out.println(emp + " ");
         return emp;
     }
     

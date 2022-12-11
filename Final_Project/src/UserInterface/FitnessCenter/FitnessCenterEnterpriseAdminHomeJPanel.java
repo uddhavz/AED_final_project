@@ -87,7 +87,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
 
         btnCreateFitnessCenter.setBackground(new java.awt.Color(255, 153, 153));
         btnCreateFitnessCenter.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
-        btnCreateFitnessCenter.setText("Create Fitness Center");
+        btnCreateFitnessCenter.setText("Fitness Center");
         btnCreateFitnessCenter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateFitnessCenterActionPerformed(evt);
@@ -96,7 +96,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
 
         btnCreateDietitian.setBackground(new java.awt.Color(255, 153, 153));
         btnCreateDietitian.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
-        btnCreateDietitian.setText("Create Dietitian");
+        btnCreateDietitian.setText("Dietitian");
         btnCreateDietitian.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateDietitianActionPerformed(evt);
