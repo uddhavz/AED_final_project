@@ -59,7 +59,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         btnSubmit2 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         lblName6 = new javax.swing.JLabel();
-        txtComments = new javax.swing.JTextField();
+        dietPicker = new javax.swing.JComboBox<>();
 
         mainPanel.setBackground(new java.awt.Color(79, 173, 177));
 
@@ -166,7 +166,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         panelProcessOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         btnSubmit2.setBackground(new java.awt.Color(79, 173, 177));
-        btnSubmit2.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSubmit2.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit2.setText("Submit");
         btnSubmit2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit2.setBorderPainted(false);
@@ -176,30 +176,16 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel6.setText("Submit Diet");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel6.setIconTextGap(0);
 
-        lblName6.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblName6.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblName6.setText("Diet Plan");
 
-        txtComments.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
-        txtComments.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtCommentsFocusGained(evt);
-            }
-        });
-        txtComments.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCommentsActionPerformed(evt);
-            }
-        });
-        txtComments.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtCommentsKeyTyped(evt);
-            }
-        });
+        dietPicker.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
+        dietPicker.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Diet", "High Sugar", "Iron Deficiency", "Weight Loss", "Weight Gain" }));
 
         javax.swing.GroupLayout panelProcessOrderLayout = new javax.swing.GroupLayout(panelProcessOrder);
         panelProcessOrder.setLayout(panelProcessOrderLayout);
@@ -208,29 +194,34 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
             .addGroup(panelProcessOrderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
                     .addGroup(panelProcessOrderLayout.createSequentialGroup()
                         .addComponent(lblName6, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtComments))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProcessOrderLayout.createSequentialGroup()
-                        .addGap(0, 316, Short.MAX_VALUE)
-                        .addComponent(btnSubmit2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(dietPicker, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnSubmit2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 202, Short.MAX_VALUE)))
                 .addContainerGap())
         );
+
+        panelProcessOrderLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSubmit2, lblName6});
+
         panelProcessOrderLayout.setVerticalGroup(
             panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProcessOrderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName6, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(txtComments, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSubmit2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSubmit2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelProcessOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblName6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dietPicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
+
+        panelProcessOrderLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnSubmit2, dietPicker, lblName6});
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -303,11 +294,9 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         for(int i=workRequest.size()-1; i>=0;i--){
             PathologyTestWR req = (PathologyTestWR)workRequest.get(i);
             if(req.getReceiver()!=account){
-                System.out.println(req.getReceiver()+" ->"+ account);    
                 continue;
             }
             if((req.getStatus().equals("Completed"))||(req.getStatus().equals("Sent to Dietitian"))){
-                System.out.println(req.getStatus()+" -> Status ");
                 Object[] row = new Object[4];
             row[0] = req;
             
@@ -340,7 +329,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
 
     private void btnSubmit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmit2ActionPerformed
 
-            request.setRemark(txtComments.getText());
+            request.setRemark((String)dietPicker.getSelectedItem());
             request.setStatus("Completed");
             panelProcessOrder.setVisible(false);
             populateTable();
@@ -349,23 +338,12 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnSubmit2ActionPerformed
 
-    private void txtCommentsFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCommentsFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCommentsFocusGained
-
-    private void txtCommentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommentsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCommentsActionPerformed
-
-    private void txtCommentsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCommentsKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCommentsKeyTyped
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Enterprises;
     private javax.swing.JButton btnApproveTest;
     private javax.swing.JButton btnSubmit2;
+    private javax.swing.JComboBox<String> dietPicker;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel10;
@@ -376,7 +354,6 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel panelProcessOrder;
     private javax.swing.JTable tblTestResult;
-    private javax.swing.JTextField txtComments;
     // End of variables declaration//GEN-END:variables
 
     
