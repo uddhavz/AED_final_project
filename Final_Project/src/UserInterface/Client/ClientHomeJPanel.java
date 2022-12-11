@@ -44,7 +44,6 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
         btnShoppingCart = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         imgLogo = new javax.swing.JLabel();
-        btnSearch = new javax.swing.JButton();
         btnMeetDietitian = new javax.swing.JButton();
         btnViewDiet = new javax.swing.JButton();
         btnViewOrders = new javax.swing.JButton();
@@ -79,14 +78,6 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
         imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
-        btnSearch.setBackground(new java.awt.Color(79, 173, 177));
-        btnSearch.setText("Search ");
-        btnSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSearchActionPerformed(evt);
-            }
-        });
-
         btnMeetDietitian.setBackground(new java.awt.Color(79, 173, 177));
         btnMeetDietitian.setText("Consult Center");
         btnMeetDietitian.addActionListener(new java.awt.event.ActionListener() {
@@ -119,22 +110,18 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
                 .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnShoppingCart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
-                    .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnMeetDietitian, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnViewDiet, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(btnViewOrders, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))))
+                            .addComponent(btnViewDiet, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
+                    .addComponent(btnViewOrders, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(btnShoppingCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         OptionsJPanelLayout.setVerticalGroup(
@@ -142,17 +129,15 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(72, 72, 72)
                 .addComponent(btnShoppingCart, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnViewOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(130, 130, 130)
+                .addGap(64, 64, 64)
                 .addComponent(btnMeetDietitian, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnViewDiet, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 551, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 603, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );
@@ -262,10 +247,6 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
         layout.previous(MainJFrame.mainPanel);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSearchActionPerformed
-
     private void btnMeetDietitianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMeetDietitianActionPerformed
         // TODO add your handling code here:
         Client client=null;
@@ -289,10 +270,11 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
                 client = c;
             }
         }
-        OrdersJPanel ordersJPanel = new OrdersJPanel(account, system, client);
-        ActivityJPanel.add("OrdersJPanel", ordersJPanel);
+        ViewDietHistoryJPanel viewDietHistoryJPanel = new ViewDietHistoryJPanel(account, system, client);
+        ActivityJPanel.add("OrdersJPanel", viewDietHistoryJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
+
     }//GEN-LAST:event_btnViewDietActionPerformed
 
     private void btnViewOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewOrdersActionPerformed
@@ -304,11 +286,10 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
                 client = c;
             }
         }
-        ViewDietHistoryJPanel viewDietHistoryJPanel = new ViewDietHistoryJPanel(account, system, client);
-        ActivityJPanel.add("OrdersJPanel", viewDietHistoryJPanel);
+        OrdersJPanel ordersJPanel = new OrdersJPanel(account, system, client);
+        ActivityJPanel.add("OrdersJPanel", ordersJPanel);
         CardLayout layout = (CardLayout)ActivityJPanel.getLayout();
         layout.next(ActivityJPanel);
-
     }//GEN-LAST:event_btnViewOrdersActionPerformed
 
 
@@ -318,7 +299,6 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel bgImage;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMeetDietitian;
-    private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnShoppingCart;
     private javax.swing.JButton btnViewDiet;
     private javax.swing.JButton btnViewOrders;

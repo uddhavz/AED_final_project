@@ -148,14 +148,11 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="btnLogout" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="btnShoppingCart" alignment="1" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="btnLogout" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
@@ -164,16 +161,13 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="btnSearch" pref="238" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="btnMeetDietitian" alignment="1" max="32767" attributes="0"/>
                                               <Component id="btnViewDiet" alignment="0" pref="238" max="32767" attributes="0"/>
-                                              <Component id="btnViewOrders" alignment="0" pref="238" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
+                                      <Component id="btnViewOrders" alignment="0" pref="244" max="32767" attributes="0"/>
+                                      <Component id="btnShoppingCart" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -184,17 +178,15 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="imgLogo" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   <Component id="btnShoppingCart" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                  <Component id="btnSearch" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="btnViewOrders" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                   <Component id="btnMeetDietitian" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="btnViewDiet" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace pref="551" max="32767" attributes="0"/>
+                                  <EmptySpace pref="603" max="32767" attributes="0"/>
                                   <Component id="btnLogout" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
                               </Group>
@@ -234,17 +226,6 @@
                               <Dimension value="[60, 60]"/>
                             </Property>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JButton" name="btnSearch">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="b1" green="ad" red="4f" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Search "/>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="btnMeetDietitian">
                           <Properties>

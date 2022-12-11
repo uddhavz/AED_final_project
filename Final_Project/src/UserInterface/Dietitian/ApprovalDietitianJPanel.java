@@ -299,21 +299,27 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         
         ArrayList<WorkRequest> workRequest = fitnessCenter.getWorkQueue().getWorkRequestListArray2();
         
+        
         for(int i=workRequest.size()-1; i>=0;i--){
             PathologyTestWR req = (PathologyTestWR)workRequest.get(i);
-            
             if(req.getReceiver()!=account){
+                System.out.println(req.getReceiver()+" ->"+ account);    
                 continue;
             }
-            if(!req.getStatus().equals("Sent to Dietitian")){
-                continue;
-            }
-            Object[] row = new Object[4];
+            if((req.getStatus().equals("Completed"))||(req.getStatus().equals("Sent to Dietitian"))){
+                System.out.println(req.getStatus()+" -> Status ");
+                Object[] row = new Object[4];
             row[0] = req;
+            
             row[2] = req.getClient().getEmployee().getName();
             row[1] = req.getReceiver() == null ? null : req.getReceiver().getEmp().getName();
             row[3] = req.getTestResult();
+            System.out.println("Row -> "+ row);
             model.addRow(row);
+                
+            }
+            
+            
         }
     }
     
@@ -339,7 +345,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
             panelProcessOrder.setVisible(false);
             populateTable();
             
-            CallDialog callDialog = new CallDialog(mainPanel, "Test approved successfully", true);
+            CallDialog callDialog = new CallDialog(mainPanel, "Diet sent", true);
 
     }//GEN-LAST:event_btnSubmit2ActionPerformed
 
@@ -372,4 +378,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblTestResult;
     private javax.swing.JTextField txtComments;
     // End of variables declaration//GEN-END:variables
+
+    
+   
 }
