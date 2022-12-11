@@ -25,8 +25,15 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.*;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 /**
  *
@@ -1380,7 +1387,7 @@ int selectedRow = tblRequest.getSelectedRow();
 //            }
         Document document = new Document();
         try {
-            PdfWriter.getInstance(document, new FileOutputStream("TestResults.pdf"));
+            PdfWriter.getInstance(document, new FileOutputStream("Diet_Plan.pdf"));
         } catch (FileNotFoundException ex) {
 //            Logger.getLogger(ClientViewResultsJPanel.class.getName()).log(Level.SEVERE, null, ex);
         } catch (DocumentException ex) {
@@ -1393,6 +1400,36 @@ int selectedRow = tblRequest.getSelectedRow();
 //            Logger.getLogger(ClientViewResultsJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
         document.close();
+        
+        String ToEmail = client.getEmailAddress();
+
+        String FromEmail = "monster.uday@gmail.com";
+        String FromEmailPassword = "zegwmpqnpenbauhu";
+        String Subject = "Diet plan for "+client.getEmployee();
+        
+        Properties properties = new Properties();
+        properties.put("mail.smtp.auth","true");
+        properties.put("mail.smtp.starttls.enable","true" );
+        properties.put("mail.smtp.host","smtp.gmail.com");
+        properties.put("mail.smtp.port","587");
+        Session session = Session.getInstance(properties,new javax.mail.Authenticator(){
+        protected PasswordAuthentication getPasswordAuthentication(){
+            return new PasswordAuthentication(FromEmail,FromEmailPassword);
+        }
+    });
+        try{
+            MimeMessage message = new MimeMessage(session);
+//            message.setFrom(new InternetAddress(FromEmail));
+            message.setFrom(new InternetAddress("monster.uday@gmail.com"));
+
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
+            message.setSubject(Subject);
+            message.setText(str);
+            Transport.send(message);
+            System.out.println("Done");
+        }catch(Exception e){
+            System.out.println(""+e);
+        }
         
         CallDialog callDialog = new CallDialog(mainPanel, "PDF mailed successfully", true);
     }//GEN-LAST:event_btnDownloadResultActionPerformed
