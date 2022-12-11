@@ -37,7 +37,7 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.countyEnterpriseArray = countyEnterpriseArray;
         this.fns = fns;
-        
+        System.out.println("###");
         populateTable();
         
     }
@@ -92,7 +92,7 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         Enterprises.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
-        Enterprises.setText("Products");
+        Enterprises.setText("Requests list");
         Enterprises.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Enterprises.setIconTextGap(0);
 
@@ -185,22 +185,22 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(841, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1097, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1097, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -270,10 +270,11 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
     private void populateTable(){
         DefaultTableModel model = (DefaultTableModel)tblProducts.getModel();
         model.setRowCount(0);
-        
         for(Enterprise enterprise: countyEnterpriseArray){
+            System.out.println(enterprise);
             for(County county: enterprise.getCountyDirectory().getCountyDirectoryArray()){
                 ArrayList<WorkRequest> workReq = county.getWorkQueue().getWorkRequestListArray3();
+                System.out.println(workReq);
                 for(int i=workReq.size()-1; i>=0; i--){
                     FNSWorkApproval req = (FNSWorkApproval)workReq.get(i);
                     Object[] row = new Object[4];
