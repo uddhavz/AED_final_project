@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author tanma
+ * @author tanmayzope
  */
 public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
 
@@ -50,7 +50,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblShippingPartners.getModel();
         model.setRowCount(0);
 
-        String dm = "Shipping Partner";
+        String dm = "Shipping Manager";
 
         for (UserAccount us : county.getUserAccountDirectory().getUserAccountList()) {
             if (us.getRole().toString().equals(dm)) {

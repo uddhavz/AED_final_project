@@ -50,7 +50,7 @@ public class ManageManagerJpanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblManager.getModel();
         model.setRowCount(0);
 
-        String manager = "Manager";
+        String manager = "Inventory Manager";
 
         for (UserAccount us : vendor.getUserAccountDirectory().getUserAccountList()) {
             if (us.getRole().toString().equals(manager)) {
@@ -586,7 +586,7 @@ public class ManageManagerJpanel extends javax.swing.JPanel {
         btnDelete.setEnabled(true);
         btnModify.setEnabled(true);
         
-        CallDialog callDialog = new CallDialog(mainPanel, "Distribution admin added successfully", true);
+        CallDialog callDialog = new CallDialog(mainPanel, "Inventory manager added successfully", true);
     }
         
         private void hideShowValidation(JLabel lbl, String errorMessage) {

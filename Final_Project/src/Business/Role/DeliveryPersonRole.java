@@ -12,6 +12,6 @@ public class DeliveryPersonRole extends Role {
     
     @Override
     public String toString(){
-        return "Deliver Person";
+        return "Delivery Person";
     }
 }

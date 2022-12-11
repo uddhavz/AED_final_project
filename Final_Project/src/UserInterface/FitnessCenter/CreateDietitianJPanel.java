@@ -5,8 +5,10 @@
 package UserInterface.FitnessCenter;
 
 
+import Business.Employee.Emp;
 import Business.Enterprise.Enterprise;
 import Business.FitnessCenter.FitnessCenter;
+import Business.Role.DietitianRole;
 import Business.UserAccount.UserAccount;
 import UserInterface.CallDialog;
 import static UserInterface.MainJFrame.mainPanel;
@@ -240,17 +242,17 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
         tblDietitian.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         tblDietitian.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Dietitian Username", "Name", "Profession"
+                "Dietitian Username", "Name"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -401,11 +403,6 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
             hideShowValidation(lblDietitianNameValidation, "Please enter name");
 
         } 
-//        else if (!isValidName) {
-//            isValid = false;
-//            hideShowValidation(lblDietitianNameValidation, "Please enter name in correct format");
-//
-//        }
         if (txtUserName.getText().isEmpty()) {
             isValid = false;
             hideShowValidation(lblUsernameValidation, "Please enter username");
@@ -439,9 +436,12 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
         String username = txtUserName.getText();
         String password = txtPassword.getText();
         String name = txtDietitianInputName.getText();
-        String type = "";
+        String type = "Dietitian";
 
         populateTable(fitnesscenter);
+        
+        Emp emp = fitnesscenter.getEmpDirectory().createEmp(name);
+        UserAccount ua = fitnesscenter.getUserAccountDirectory().createUserAccount(username, password, emp, new DietitianRole());
 
         txtUserName.setText("");
         txtPassword.setText("");
@@ -517,25 +517,17 @@ public class CreateDietitianJPanel extends javax.swing.JPanel {
     private void populateTable(FitnessCenter fitnesscenter) {
         DefaultTableModel model = (DefaultTableModel) tblDietitian.getModel();
         model.setRowCount(0);
-        //String dm = "Business.Role.LabAdminRole";
-//        String approveDoc = "Approving Dietitian";
-//        String consultDoc = "Consulting Dietitian";
+        String d = "Dietitian";
+        for (UserAccount userAcc : fitnesscenter.getUserAccountDirectory().getUserAccountList()) {
+            if (userAcc.getRole().toString().equals(d)) {
+                //System.out.println(us.getUsername()+"----"+us.getPassword()+"---"+hospital.getUserAccountDirectory().authenticateUser(us.getUsername(), us.getPassword()));
+                Object[] row = new Object[3];
+                row[0] = userAcc;
+                row[1] = userAcc.getEmp().getName();
+                model.addRow(row);
+            }
 
-//        for (UserAccount userAcc : fitnesscenter.getUserAccountDirectory().getUserAccountList()) {
-//            if (userAcc.getRole().toString().equals(approveDoc) || userAcc.getRole().toString().equals(consultDoc)) {
-//                //System.out.println(us.getUsername()+"----"+us.getPassword()+"---"+hospital.getUserAccountDirectory().authenticateUser(us.getUsername(), us.getPassword()));
-//                Object[] row = new Object[3];
-//                row[0] = userAcc;
-//                row[1] = userAcc.getEmp().getName();
-////                if (userAcc.getRole().toString().equals(approveDoc)) {
-////                    row[2] = approveDoc;
-////                } else if (userAcc.getRole().toString().equals(consultDoc)) {
-////                    row[2] = consultDoc;
-////                }
-//                model.addRow(row);
-//            }
-//
-//        }
+        }
     }
     
 

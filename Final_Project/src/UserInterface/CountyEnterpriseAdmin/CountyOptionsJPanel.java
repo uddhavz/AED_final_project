@@ -109,7 +109,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         });
 
         btnManageCountyAdmin.setBackground(new java.awt.Color(153, 204, 0));
-        btnManageCountyAdmin.setText("Manage County Admin");
+        btnManageCountyAdmin.setText("Manage Farmers");
         btnManageCountyAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCountyAdminActionPerformed(evt);
@@ -168,7 +168,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageCountyAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnManageShippingPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 494, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );

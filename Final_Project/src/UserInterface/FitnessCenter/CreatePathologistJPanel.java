@@ -507,8 +507,7 @@ public class CreatePathologistJPanel extends javax.swing.JPanel {
     private void populateTable(FitnessCenter fitnesscenter) {
         DefaultTableModel model = (DefaultTableModel) tblPathologists.getModel();
         model.setRowCount(0);
-        //String dm = "Business.Role.LabAdminRole";
-        String role = "Lab Technician";
+        String role = "Pathologist";
 
         for (UserAccount us : fitnesscenter.getUserAccountDirectory().getUserAccountList()) {
             if (us.getRole().toString().equals(role)) {

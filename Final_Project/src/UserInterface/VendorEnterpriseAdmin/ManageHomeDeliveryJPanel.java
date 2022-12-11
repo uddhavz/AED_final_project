@@ -54,7 +54,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblHomeDelivery.getModel();
         model.setRowCount(0);
 
-        String deliveryPartner = "Home Delivery Man";
+        String deliveryPartner = "Delivery Person";
 
         for (UserAccount userAcc : vendor.getUserAccountDirectory().getUserAccountList()) {
             if (userAcc.getRole().toString().equals(deliveryPartner)) {
@@ -520,7 +520,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         vendor.getUserAccountDirectory().removeUser(userAcc);
         populateTable(vendor);
 
-        CallDialog callDialog = new CallDialog(mainPanel, "Home delivery partner deleted successfully", true);
+        CallDialog callDialog = new CallDialog(mainPanel, "Home delivery partner removed successfully", true);
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void VendorNamePickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VendorNamePickerActionPerformed

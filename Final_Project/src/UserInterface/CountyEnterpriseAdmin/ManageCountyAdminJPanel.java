@@ -7,6 +7,7 @@ package UserInterface.CountyEnterpriseAdmin;
 import Business.County.County;
 import Business.Employee.Emp;
 import Business.Enterprise.Enterprise;
+import Business.Role.FarmerRole;
 import Business.Role.InventoryManagerRole;
 import Business.UserAccount.UserAccount;
 import UserInterface.CallDialog;
@@ -51,7 +52,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel)tblCountyAdmin.getModel();
         model.setRowCount(0);
         
-        String role = "Manufacturing Admin";
+        String role = "Farmer";
         
         for(UserAccount us: county.getUserAccountDirectory().getUserAccountList()){
             if(us.getRole().toString().equals(role)){
@@ -109,7 +110,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel1.setFont(new java.awt.Font("Devanagari MT", 1, 36)); // NOI18N
-        jLabel1.setText("County Admin");
+        jLabel1.setText("Farmer Details");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -157,7 +158,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
                 {null, null}
             },
             new String [] {
-                "Username", "County Admin Name"
+                "Username", "Farmer Name"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -201,7 +202,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel2.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
-        jLabel2.setText("Add County Admin Details");
+        jLabel2.setText("Add Farmer Details");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setIconTextGap(0);
 
@@ -217,7 +218,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
         });
 
         lblAdminName.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
-        lblAdminName.setText("Admin Name:");
+        lblAdminName.setText("Farmer Name:");
 
         txtAdminName.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
         txtAdminName.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -398,7 +399,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 790, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -538,7 +539,7 @@ public class ManageCountyAdminJPanel extends javax.swing.JPanel {
             County county = (County) countyPicker.getSelectedItem();
 
             Emp employee = county.getEmpDirectory().createEmp(name);
-            UserAccount ua = county.getUserAccountDirectory().createUserAccount(username, password, employee, new InventoryManagerRole());
+            UserAccount ua = county.getUserAccountDirectory().createUserAccount(username, password, employee, new FarmerRole());
 
             populateTable(county);
 

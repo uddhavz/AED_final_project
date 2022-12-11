@@ -189,7 +189,7 @@
                                   <Component id="btnManageCountyAdmin" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnManageShippingPartner" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="494" max="32767" attributes="0"/>
                                   <Component id="btnLogout" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
                               </Group>
@@ -213,7 +213,7 @@
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="0" green="cc" red="99" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Manage County Admin"/>
+                            <Property name="text" type="java.lang.String" value="Manage Farmers"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageCountyAdminActionPerformed"/>
