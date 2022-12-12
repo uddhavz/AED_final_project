@@ -92,7 +92,7 @@ public class CountyAdminOptionJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -100,7 +100,8 @@ public class CountyAdminOptionJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnCreateProduct.setBackground(new java.awt.Color(153, 204, 0));
+        btnCreateProduct.setBackground(new java.awt.Color(102, 204, 0));
+        btnCreateProduct.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnCreateProduct.setText("Create Produce");
         btnCreateProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +109,8 @@ public class CountyAdminOptionJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnAssignOrder.setBackground(new java.awt.Color(153, 204, 0));
+        btnAssignOrder.setBackground(new java.awt.Color(102, 204, 0));
+        btnAssignOrder.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnAssignOrder.setText("Assign Order");
         btnAssignOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +118,8 @@ public class CountyAdminOptionJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(153, 204, 0));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
+        btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
