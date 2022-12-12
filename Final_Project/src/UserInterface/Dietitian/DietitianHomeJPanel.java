@@ -82,7 +82,7 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -90,7 +90,8 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnApproveTest.setBackground(new java.awt.Color(79, 173, 177));
+        btnApproveTest.setBackground(new java.awt.Color(102, 204, 0));
+        btnApproveTest.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnApproveTest.setText("Approve Test");
         btnApproveTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +99,8 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
+        btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +112,8 @@ public class DietitianHomeJPanel extends javax.swing.JPanel {
         imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
-        btnConsult.setBackground(new java.awt.Color(79, 173, 177));
+        btnConsult.setBackground(new java.awt.Color(102, 204, 0));
+        btnConsult.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnConsult.setText("Consult Client");
         btnConsult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

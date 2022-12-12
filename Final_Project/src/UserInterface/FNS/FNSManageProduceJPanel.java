@@ -62,7 +62,7 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
         btnApprove = new javax.swing.JButton();
         btnDeny = new javax.swing.JButton();
 
-        mainPanel.setBackground(new java.awt.Color(79, 173, 177));
+        mainPanel.setBackground(new java.awt.Color(102, 204, 0));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -117,8 +117,8 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblProducts);
 
-        btnApprove.setBackground(new java.awt.Color(79, 173, 177));
-        btnApprove.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnApprove.setBackground(new java.awt.Color(102, 204, 0));
+        btnApprove.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnApprove.setText("Approve");
         btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,8 +126,8 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnDeny.setBackground(new java.awt.Color(79, 173, 177));
-        btnDeny.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnDeny.setBackground(new java.awt.Color(102, 204, 0));
+        btnDeny.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnDeny.setText("Deny");
         btnDeny.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,21 +171,23 @@ public class FNSManageProduceJPanel extends javax.swing.JPanel {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                .addContainerGap(125, Short.MAX_VALUE)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(236, 236, 236)))
+                .addGap(116, 116, 116))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(61, 61, 61)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(45, 45, 45)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(841, Short.MAX_VALUE))
+                .addContainerGap(768, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

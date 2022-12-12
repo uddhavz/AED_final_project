@@ -144,7 +144,7 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel8.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane2.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -152,7 +152,8 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
         OptionsJPanel2.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel2.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnManageProductReq.setBackground(new java.awt.Color(79, 173, 177));
+        btnManageProductReq.setBackground(new java.awt.Color(102, 204, 0));
+        btnManageProductReq.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageProductReq.setText("Manage Produce Requests");
         btnManageProductReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +161,8 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
+        btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,13 +182,14 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
                 .addGroup(OptionsJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OptionsJPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(OptionsJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnManageProductReq, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(OptionsJPanel2Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 127, Short.MAX_VALUE))
+                    .addGroup(OptionsJPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnManageProductReq, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         OptionsJPanel2Layout.setVerticalGroup(
@@ -194,9 +197,9 @@ public class FNSAdminJPanel extends javax.swing.JPanel {
             .addGroup(OptionsJPanel2Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(169, 169, 169)
                 .addComponent(btnManageProductReq, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 593, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 433, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );
