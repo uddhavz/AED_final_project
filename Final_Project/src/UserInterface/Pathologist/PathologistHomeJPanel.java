@@ -40,7 +40,7 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         initComponents();
     
-//        setLogo();
+        setLogo();
 //        setBackground();
         
         setModel();
@@ -64,19 +64,19 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         }
     }
 
-//    private void setLogo() {
-//        Image image = null;
-//        try {
-//            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-//        ImageIcon icon = new ImageIcon(scaledImg);
-//        imgLogo.setIcon(icon);
-//    }
-//    
+    private void setLogo() {
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(130, 130, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
+    }
+    
 //    private void setBackground() {
 //        
 //        Image image = null;
@@ -149,23 +149,24 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
                 .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnManageLabTests, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap()
+                        .addComponent(btnManageLabTests, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnManageLabTests, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 857, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 428, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );
@@ -198,13 +199,13 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 925, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -233,7 +234,7 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1600, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -242,7 +243,7 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -254,7 +255,7 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1600, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -263,7 +264,7 @@ public class PathologistHomeJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

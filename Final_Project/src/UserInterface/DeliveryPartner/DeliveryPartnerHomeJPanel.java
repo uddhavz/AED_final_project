@@ -40,7 +40,7 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.useraccount = account;
         setModel();
-//        setLogo();
+        setLogo();
 //        setBackground();
     }
     
@@ -63,16 +63,16 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
     }
     
     private void setLogo() {
-//        Image image = null;
-//        try {
-//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-//        ImageIcon icon = new ImageIcon(scaledImg);
-//        imgLogo.setIcon(icon);
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
     }
     
     private void setBackground() {
@@ -91,18 +91,15 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         OptionsJPanel = new javax.swing.JPanel();
         btnManageNetwork = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        imgLogo = new javax.swing.JLabel();
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
-
-        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0)));
+        setBackground(new java.awt.Color(102, 204, 0));
 
         jSplitPane1.setDividerLocation(250);
 
@@ -127,29 +124,41 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
             }
         });
 
+        imgLogo.setText("jLabel2");
+        imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
+        imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
+
         javax.swing.GroupLayout OptionsJPanelLayout = new javax.swing.GroupLayout(OptionsJPanel);
         OptionsJPanel.setLayout(OptionsJPanelLayout);
         OptionsJPanelLayout.setHorizontalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 248, Short.MAX_VALUE)
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btnManageNetwork, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                .addGap(17, 17, 17))
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
                     .addGap(18, 18, 18)
-                    .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnManageNetwork, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
+                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(19, 19, 19)))
         );
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1198, Short.MAX_VALUE)
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(btnManageNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(618, Short.MAX_VALUE))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                    .addGap(126, 126, 126)
-                    .addComponent(btnManageNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(402, 402, 402)
+                    .addGap(566, 566, 566)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(594, Short.MAX_VALUE)))
+                    .addContainerGap(282, Short.MAX_VALUE)))
         );
 
         jSplitPane1.setLeftComponent(OptionsJPanel);
@@ -160,40 +169,21 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setRightComponent(ActivityJPanel);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1612, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1212, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jSplitPane1)
-                    .addContainerGap()))
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1188, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSplitPane1)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -221,7 +211,7 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel bgImage;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnManageNetwork;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel imgLogo;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }

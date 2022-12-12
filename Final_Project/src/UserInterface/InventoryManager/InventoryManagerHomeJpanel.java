@@ -41,7 +41,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         this.account = account;
         initComponents();
         setModel();
-//        setLogo();
+        setLogo();
 //        setBackground();
     }
     
@@ -84,19 +84,19 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         }
     }
     
-//    private void setLogo() {
-//        Image image = null;
-//        try {
-//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-//        ImageIcon icon = new ImageIcon(scaledImg);
-//        imgLogo.setIcon(icon);
-//    }
-//    
+    private void setLogo() {
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
+    }
+    
 //    private void setBackground() {
 //        
 //        Image image = null;
@@ -127,6 +127,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         btnPlaceShippingOrder = new javax.swing.JButton();
         btnAssignDeliveryPartner = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        imgLogo = new javax.swing.JLabel();
         ActivityJPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -164,7 +165,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(255, 153, 153));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
         btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -173,6 +174,10 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             }
         });
 
+        imgLogo.setText("jLabel2");
+        imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
+        imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
+
         javax.swing.GroupLayout OptionsJPanelLayout = new javax.swing.GroupLayout(OptionsJPanel);
         OptionsJPanel.setLayout(OptionsJPanelLayout);
         OptionsJPanelLayout.setHorizontalGroup(
@@ -180,10 +185,15 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OptionsJPanelLayout.createSequentialGroup()
+                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39))))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
                     .addContainerGap()
@@ -196,16 +206,18 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(44, 44, 44)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(btnViewOrderHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPlaceShippingOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAssignDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(945, Short.MAX_VALUE))
+                .addContainerGap(550, Short.MAX_VALUE))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                    .addContainerGap(1033, Short.MAX_VALUE)
+                    .addContainerGap(733, Short.MAX_VALUE)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(127, 127, 127)))
         );
@@ -224,7 +236,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,6 +288,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnPlaceShippingOrder;
     private javax.swing.JButton btnViewOrderHistory;
+    private javax.swing.JLabel imgLogo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables

@@ -34,23 +34,23 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         this.system = system;
         this.enterprise = enterprise;
         
-//        setLogo();
+        setLogo();
 //        setBackground();
         
     }
 
-//    private void setLogo() {
-//        Image image = null;
-//        try {
-//            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-//        ImageIcon icon = new ImageIcon(scaledImg);
-//        imgLogo.setIcon(icon);
-//    }
+    private void setLogo() {
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
+    }
 //    
 //    private void setBackground() {
 //        
@@ -100,25 +100,25 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnManageCounty.setBackground(new java.awt.Color(153, 204, 0));
+        btnManageCounty.setBackground(new java.awt.Color(102, 204, 0));
         btnManageCounty.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
-        btnManageCounty.setText("Manage County");
+        btnManageCounty.setText("Agriculture Unit");
         btnManageCounty.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCountyActionPerformed(evt);
             }
         });
 
-        btnManageCountyAdmin.setBackground(new java.awt.Color(153, 204, 0));
+        btnManageCountyAdmin.setBackground(new java.awt.Color(102, 204, 0));
         btnManageCountyAdmin.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
-        btnManageCountyAdmin.setText("Manage Farmers");
+        btnManageCountyAdmin.setText("Farmers");
         btnManageCountyAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCountyAdminActionPerformed(evt);
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(153, 204, 0));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
         btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -131,9 +131,9 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
-        btnManageShippingPartner.setBackground(new java.awt.Color(153, 204, 0));
+        btnManageShippingPartner.setBackground(new java.awt.Color(102, 204, 0));
         btnManageShippingPartner.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
-        btnManageShippingPartner.setText("Manage Shipping Partner");
+        btnManageShippingPartner.setText("Shipping Partner");
         btnManageShippingPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageShippingPartnerActionPerformed(evt);
@@ -148,31 +148,31 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
                 .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnManageCounty, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnManageCountyAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnManageShippingPartner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnManageCounty, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageCountyAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageShippingPartner, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))))
                 .addContainerGap())
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(42, 42, 42)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(btnManageCounty, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnManageCountyAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnManageShippingPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 494, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );
@@ -219,7 +219,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -228,7 +228,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -240,7 +240,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -249,7 +249,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

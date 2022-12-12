@@ -44,7 +44,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jSplitPane1" alignment="0" pref="1588" max="32767" attributes="0"/>
+              <Component id="jSplitPane1" alignment="0" pref="1388" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -79,19 +79,23 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="85" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnCreateFitnessCenter" alignment="1" pref="182" max="32767" attributes="0"/>
+                              <Component id="btnPathologist" alignment="1" max="32767" attributes="0"/>
+                              <Component id="btnCreateDietitian" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="imgIogo" min="-2" pref="125" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnLogout" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnCreateFitnessCenter" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="btnPathologist" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="btnCreateDietitian" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="btnLogout" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -100,21 +104,21 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="1093" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                          <Component id="imgIogo" min="-2" pref="120" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="btnCreateFitnessCenter" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnCreateDietitian" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnPathologist" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace pref="551" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
-                              <Component id="btnCreateFitnessCenter" min="-2" pref="38" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnCreateDietitian" min="-2" pref="38" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnPathologist" min="-2" pref="38" max="-2" attributes="0"/>
-                              <EmptySpace min="301" pref="301" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="553" max="-2" attributes="0"/>
                               <Component id="btnLogout" min="-2" pref="38" max="-2" attributes="0"/>
-                              <EmptySpace pref="595" max="32767" attributes="0"/>
+                              <EmptySpace pref="295" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -177,7 +181,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="imgIogo">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="jLabel1"/>
                   </Properties>

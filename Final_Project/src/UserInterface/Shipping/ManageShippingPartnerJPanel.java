@@ -33,6 +33,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         this.county = county;
         panelProcessOrder.setVisible(false);
+        jPanel5.setVisible(false);
         
         populateTable();
     }
@@ -87,7 +88,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         txtMessage = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(102, 204, 0));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -144,7 +145,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblWorkRequest);
 
-        btnViewOrders.setBackground(new java.awt.Color(255, 153, 153));
+        btnViewOrders.setBackground(new java.awt.Color(102, 204, 0));
         btnViewOrders.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnViewOrders.setText("View Order");
         btnViewOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +154,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnProcessOrder.setBackground(new java.awt.Color(255, 153, 153));
+        btnProcessOrder.setBackground(new java.awt.Color(102, 204, 0));
         btnProcessOrder.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnProcessOrder.setText("Process Order");
         btnProcessOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -183,15 +184,16 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(16, 16, 16)
                 .addComponent(Enterprises, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(btnProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnViewOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnViewOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -233,7 +235,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         panelProcessOrder.setBackground(new java.awt.Color(255, 255, 255));
         panelProcessOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSubmit.setBackground(new java.awt.Color(255, 153, 153));
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
         btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -313,7 +315,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,7 +328,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelProcessOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(274, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -338,6 +340,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
             CallDialog calldialog = new CallDialog(mainPanel, "Please select a row to view", false);
             return;
         }
+        jPanel5.setVisible(true);
 
         DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
         model.setRowCount(0);
@@ -384,6 +387,7 @@ public class ManageShippingPartnerJPanel extends javax.swing.JPanel {
         request.setMessage(txtMessage.getText());
         request.setStatus("Completed");
         panelProcessOrder.setVisible(false);
+        jPanel5.setVisible(false);
         for (Produce produce : request.getOrders().getItems()) {
             Produce pro = request.getVendor().getProduceDirectory().newProduce(produce.getProdName(), produce.getPrice(), request.getOrders().getQuantity());
             pro.setDistribution(request.getVendor());

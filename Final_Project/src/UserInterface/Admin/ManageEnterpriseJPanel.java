@@ -112,7 +112,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(450, 450, 450)
                 .addComponent(jLabel1)
-                .addContainerGap(410, Short.MAX_VALUE))
+                .addContainerGap(338, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +122,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        mainPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
+        mainPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1120, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -230,7 +230,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {enterpriseTypePicker, jLabel3, jLabel4, lblName1, statePicker, txtEnterpriseName});
 
-        mainPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, -1, -1));
+        mainPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -284,21 +284,21 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        mainPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 1192, -1));
+        mainPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 1120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1350, Short.MAX_VALUE)
+            .addGap(0, 1262, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1262, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

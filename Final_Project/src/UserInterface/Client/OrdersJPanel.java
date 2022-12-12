@@ -44,21 +44,9 @@ public class OrdersJPanel extends javax.swing.JPanel {
         this.client = client;
         
         populateTable();
-        populatePicker();
     }
 
-    private void populatePicker(){
-        fitnesscenterPicker.removeAllItems();
-        for (State state: system.getStateList()) {
-                for (Enterprise enterprise:state.getEnterpriseDirectory().getEnterpriseListArray()) {
-                    if (enterprise.getFitnesscenterDirectory() != null){
-                        for (FitnessCenter fitnessCenter: enterprise.getFitnesscenterDirectory().getFitnessCentersArray()) {
-                            fitnesscenterPicker.addItem(fitnessCenter);
-                        }
-                    }
-                }
-            }
-    }
+    
     
     private void populateTable(){
         DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
@@ -103,11 +91,6 @@ public class OrdersJPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        txtMessage = new javax.swing.JTextField();
-        btnSendForTesting = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        fitnesscenterPicker = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblOrders = new javax.swing.JTable();
 
@@ -126,46 +109,18 @@ public class OrdersJPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(450, 450, 450)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(450, Short.MAX_VALUE))
+                .addGap(362, 362, 362))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-
-        jLabel4.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
-        jLabel4.setText("Message:");
-
-        txtMessage.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
-        txtMessage.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtMessageFocusGained(evt);
-            }
-        });
-
-        btnSendForTesting.setBackground(new java.awt.Color(102, 204, 0));
-        btnSendForTesting.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
-        btnSendForTesting.setText("Send For Testing");
-        btnSendForTesting.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendForTestingActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
-        jLabel5.setText("Select Center:");
-
-        fitnesscenterPicker.setFont(new java.awt.Font("Devanagari MT", 0, 13)); // NOI18N
-        fitnesscenterPicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -194,140 +149,61 @@ public class OrdersJPanel extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(fitnesscenterPicker, 0, 212, Short.MAX_VALUE)
-                        .addComponent(txtMessage))
-                    .addComponent(btnSendForTesting, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 982, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fitnesscenterPicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addComponent(btnSendForTesting, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {fitnesscenterPicker, jLabel4, jLabel5, txtMessage});
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                .addContainerGap(103, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(72, 72, 72))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE))
+                .addGap(237, 237, 237))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(824, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1350, Short.MAX_VALUE)
+            .addGap(0, 1253, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1253, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtMessageFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtMessageFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMessageFocusGained
-
-    private void btnSendForTestingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendForTestingActionPerformed
-        // TODO add your handling code here:
-//
-//        int selectedRow = tblOrders.getSelectedRow();
-//        if (selectedRow < 0){
-//            CallDialog callDialog = new CallDialog(mainPanel, "Please select a row to send", false);
-//            return;
-//        }
-//        
-//        ArrayList<WorkRequest> workReq = userAccount.getWorkQueue().getWorkRequestListArray();
-//        ClientOrderWR clientOrderWorkReq = null;
-//            try {
-//                clientOrderWorkReq = (ClientOrderWR)workReq.get(selectedRow);
-//            }
-//            catch(Exception e){
-//
-//            }
-//
-//            Order order = clientOrderWorkReq.getOrder();
-//        if (!clientOrderWorkReq.getStatus().equals("Completed")) {
-//            CallDialog callDialog = new CallDialog(mainPanel, "Order not delivered to you yet", false);
-//            return;
-//        }
-//
-//        PathologyTestWR request = new PathologyTestWR();
-//        DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
-////        Produce produce = (Produce)model.getValueAt(selectedRow, 0);
-//        
-//        FitnessCenter fitnessCenter = (FitnessCenter) fitnesscenterPicker.getSelectedItem();
-//        request.setClient(client);
-//        System.out.println(client);
-//        request.setFitnessCenter(fitnessCenter);
-//        request.setTest(txtMessage.getText());
-//        request.setMessage(txtMessage.getText());
-//        request.setStatus("Sample sent");
-//        request.setTestResult("");
-//        
-//        fitnessCenter.getWorkQueue().getWorkRequestListArray2().add(request);
-//        userAccount.getWorkQueue().getWorkRequestListArray2().add(request);
-//        
-//        CallDialog callDialog = new CallDialog(mainPanel, "Sample sent successfully", true);
-//        
-//        populateTable();
-
-    }//GEN-LAST:event_btnSendForTestingActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSendForTesting;
-    private javax.swing.JComboBox fitnesscenterPicker;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTable tblOrders;
-    private javax.swing.JTextField txtMessage;
     // End of variables declaration//GEN-END:variables
 }

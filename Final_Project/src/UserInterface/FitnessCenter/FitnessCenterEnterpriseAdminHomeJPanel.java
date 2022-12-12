@@ -7,6 +7,7 @@ package UserInterface.FitnessCenter;
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.FitnessCenter.FitnessCenter;
 import UserInterface.MainJFrame;
 import java.awt.CardLayout;
 import java.awt.Image;
@@ -22,6 +23,7 @@ import javax.swing.ImageIcon;
  */
 public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
+    
     /**
      * Creates new form FitnessCenterEnterpriseAdmin
      */
@@ -33,16 +35,16 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
     }
     
     private void setLogo() {
-//        Image image = null;
-//        try {
-//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-//        ImageIcon icon = new ImageIcon(scaledImg);
-//        imgLogo.setIcon(icon);
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgIogo.setIcon(icon);
     }
     
     private void setBackground() {
@@ -77,7 +79,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
         btnCreateDietitian = new javax.swing.JButton();
         btnPathologist = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        imgIogo = new javax.swing.JLabel();
         ActivityJPanel = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(102, 204, 0));
@@ -121,43 +123,46 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("jLabel1");
+        imgIogo.setText("jLabel1");
 
         javax.swing.GroupLayout OptionsJPanelLayout = new javax.swing.GroupLayout(OptionsJPanel);
         OptionsJPanel.setLayout(OptionsJPanelLayout);
         OptionsJPanelLayout.setHorizontalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jLabel1)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateFitnessCenter, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                    .addComponent(btnPathologist, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCreateDietitian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OptionsJPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imgIogo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
-                    .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCreateFitnessCenter, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPathologist, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCreateDietitian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(19, 19, 19)))
         );
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jLabel1)
-                .addContainerGap(1093, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addComponent(imgIogo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnCreateFitnessCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCreateDietitian, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPathologist, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(551, Short.MAX_VALUE))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                    .addGap(126, 126, 126)
-                    .addComponent(btnCreateFitnessCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(btnCreateDietitian, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(btnPathologist, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(301, 301, 301)
+                    .addGap(553, 553, 553)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(595, Short.MAX_VALUE)))
+                    .addContainerGap(295, Short.MAX_VALUE)))
         );
 
         jSplitPane1.setLeftComponent(OptionsJPanel);
@@ -170,7 +175,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1588, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1388, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,7 +241,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateFitnessCenter;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnPathologist;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel imgIogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
