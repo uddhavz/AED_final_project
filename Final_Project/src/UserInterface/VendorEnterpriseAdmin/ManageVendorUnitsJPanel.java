@@ -75,13 +75,14 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(79, 173, 177));
 
-        jPanel2.setBackground(new java.awt.Color(79, 173, 177));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel2.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel1.setFont(new java.awt.Font("Devanagari MT", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
         jLabel1.setText("Manage Vendor Unit");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -91,7 +92,7 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(450, 450, 450)
                 .addComponent(jLabel1)
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,6 +105,7 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        tblVendor.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         tblVendor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -125,8 +127,8 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblVendor);
 
-        btnModify.setBackground(new java.awt.Color(79, 173, 177));
-        btnModify.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnModify.setBackground(new java.awt.Color(102, 204, 0));
+        btnModify.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnModify.setText("Modify");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,8 +136,8 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(79, 173, 177));
-        btnDelete.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnDelete.setBackground(new java.awt.Color(102, 204, 0));
+        btnDelete.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,10 +174,10 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        lblName1.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblName1.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblName1.setText("Vendor Unit Name:");
 
-        txtVendorInputName.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
+        txtVendorInputName.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         txtVendorInputName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtVendorInputNameFocusGained(evt);
@@ -192,17 +194,17 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblVendorNameValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblVendorNameValidation.setFont(new java.awt.Font("Myanmar MN", 0, 12)); // NOI18N
         lblVendorNameValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblVendorNameValidation.setText("jLabel2");
 
-        jLabel2.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel2.setText("Add Vendor Unit Name");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setIconTextGap(0);
 
-        btnAdd.setBackground(new java.awt.Color(79, 173, 177));
-        btnAdd.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnAdd.setBackground(new java.awt.Color(102, 204, 0));
+        btnAdd.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,8 +212,8 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
-        btnSubmit.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
+        btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,23 +267,23 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(87, 87, 87)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(249, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(60, 60, 60)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(308, Short.MAX_VALUE))
+                .addContainerGap(604, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -290,20 +292,20 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1420, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1197, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1420, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 790, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1197, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mainPanelLayout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -312,7 +314,7 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 544, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mainPanelLayout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -324,7 +326,7 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1197, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -333,7 +335,7 @@ public class ManageVendorUnitsJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 544, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

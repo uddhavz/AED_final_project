@@ -105,13 +105,14 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
 
         jPanel4.setBackground(new java.awt.Color(79, 173, 177));
 
-        jPanel5.setBackground(new java.awt.Color(79, 173, 177));
+        jPanel5.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel5.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel1.setFont(new java.awt.Font("Devanagari MT", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
         jLabel1.setText("Manage Home Delivery Partner");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -121,7 +122,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(350, 350, 350)
                 .addComponent(jLabel1)
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addContainerGap(324, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,6 +135,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        tblHomeDelivery.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         tblHomeDelivery.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -155,8 +157,8 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblHomeDelivery);
 
-        btnModify.setBackground(new java.awt.Color(79, 173, 177));
-        btnModify.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnModify.setBackground(new java.awt.Color(102, 204, 0));
+        btnModify.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnModify.setText("Modify");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,8 +166,8 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(79, 173, 177));
-        btnDelete.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnDelete.setBackground(new java.awt.Color(102, 204, 0));
+        btnDelete.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +186,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnModify, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(417, Short.MAX_VALUE))
+                .addContainerGap(477, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,15 +204,16 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel2.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel2.setText("Add Delivery Partner Details");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setIconTextGap(0);
 
-        lblVendorName.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblVendorName.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblVendorName.setText("Distributor Name:");
 
-        VendorNamePicker.setBackground(new java.awt.Color(79, 173, 177));
+        VendorNamePicker.setBackground(new java.awt.Color(102, 204, 0));
+        VendorNamePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         VendorNamePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         VendorNamePicker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,10 +221,10 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblManagerName.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblManagerName.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblManagerName.setText("Delivery Partner:");
 
-        txtDeliveryPartnerName.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
+        txtDeliveryPartnerName.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         txtDeliveryPartnerName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtDeliveryPartnerNameFocusGained(evt);
@@ -238,14 +241,14 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblDeliveryPartnerNameValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblDeliveryPartnerNameValidation.setFont(new java.awt.Font("Myanmar MN", 0, 12)); // NOI18N
         lblDeliveryPartnerNameValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblDeliveryPartnerNameValidation.setText("jLabel2");
 
-        lblUsername.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblUsername.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblUsername.setText("Username:");
 
-        txtUserName.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
+        txtUserName.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         txtUserName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtUserNameFocusGained(evt);
@@ -262,25 +265,26 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblUsernameValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblUsernameValidation.setFont(new java.awt.Font("Myanmar MN", 0, 12)); // NOI18N
         lblUsernameValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblUsernameValidation.setText("jLabel2");
 
-        lblPassword.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblPassword.setText("Password:");
 
-        lblPasswordValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblPasswordValidation.setFont(new java.awt.Font("Myanmar MN", 0, 12)); // NOI18N
         lblPasswordValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblPasswordValidation.setText("jLabel2");
 
+        txtPassword.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         txtPassword.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtPasswordFocusGained(evt);
             }
         });
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
-        btnSubmit.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
+        btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,7 +303,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
+                            .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblPasswordValidation)
@@ -359,24 +363,24 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(6, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(470, 470, 470))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(60, 60, 60)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(529, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -385,13 +389,13 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1417, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1417, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1417, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 790, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -440,7 +444,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1417, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mainPanelLayout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -449,7 +453,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mainPanelLayout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -461,7 +465,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1417, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -470,7 +474,7 @@ public class ManageHomeDeliveryJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

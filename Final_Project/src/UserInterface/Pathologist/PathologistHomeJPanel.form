@@ -16,7 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="1440" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="1600" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="925" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="1200" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -45,7 +45,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="1440" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="1600" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -57,7 +57,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="925" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="1200" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -104,7 +104,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jPanel" max="32767" attributes="0"/>
+                          <Component id="jPanel" pref="1600" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -112,7 +112,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jPanel" pref="925" max="32767" attributes="0"/>
+                          <Component id="jPanel" pref="1200" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -124,7 +124,7 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder thickness="5">
-                          <Color PropertyName="color" blue="b1" green="ad" red="4f" type="rgb"/>
+                          <Color PropertyName="color" blue="0" green="cc" red="66" type="rgb"/>
                         </LineBorder>
                       </Border>
                     </Property>
@@ -203,7 +203,7 @@
                                       <Component id="imgLogo" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Component id="btnManageLabTests" min="-2" pref="38" max="-2" attributes="0"/>
-                                      <EmptySpace pref="582" max="32767" attributes="0"/>
+                                      <EmptySpace pref="857" max="32767" attributes="0"/>
                                       <Component id="btnLogout" min="-2" pref="38" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
                                   </Group>
@@ -214,7 +214,7 @@
                             <Component class="javax.swing.JButton" name="btnManageLabTests">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="b1" green="ad" red="4f" type="rgb"/>
+                                  <Color blue="0" green="cc" red="66" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Manage Tests Requests"/>
                               </Properties>
@@ -225,7 +225,7 @@
                             <Component class="javax.swing.JButton" name="btnLogout">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="b1" green="ad" red="4f" type="rgb"/>
+                                  <Color blue="0" green="cc" red="66" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Logout"/>
                               </Properties>

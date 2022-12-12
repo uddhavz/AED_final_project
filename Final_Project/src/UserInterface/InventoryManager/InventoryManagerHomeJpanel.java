@@ -137,7 +137,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnViewOrderHistory.setBackground(new java.awt.Color(255, 153, 153));
+        btnViewOrderHistory.setBackground(new java.awt.Color(102, 204, 0));
         btnViewOrderHistory.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnViewOrderHistory.setText("View Order History");
         btnViewOrderHistory.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +146,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             }
         });
 
-        btnPlaceShippingOrder.setBackground(new java.awt.Color(255, 153, 153));
+        btnPlaceShippingOrder.setBackground(new java.awt.Color(102, 204, 0));
         btnPlaceShippingOrder.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnPlaceShippingOrder.setText("Place Shipping Order");
         btnPlaceShippingOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +155,7 @@ public class InventoryManagerHomeJpanel extends javax.swing.JPanel {
             }
         });
 
-        btnAssignDeliveryPartner.setBackground(new java.awt.Color(255, 153, 153));
+        btnAssignDeliveryPartner.setBackground(new java.awt.Color(102, 204, 0));
         btnAssignDeliveryPartner.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnAssignDeliveryPartner.setText("Assign Delivery Partner");
         btnAssignDeliveryPartner.addActionListener(new java.awt.event.ActionListener() {

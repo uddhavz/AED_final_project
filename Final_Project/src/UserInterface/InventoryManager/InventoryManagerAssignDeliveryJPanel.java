@@ -85,7 +85,8 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         deliveryPicker = new javax.swing.JComboBox();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(102, 204, 0));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -100,7 +101,7 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(300, 300, 300)
                 .addComponent(jLabel1)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +119,7 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         lblOrders.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lblOrders.setIconTextGap(0);
 
-        btnAccept.setBackground(new java.awt.Color(255, 153, 153));
+        btnAccept.setBackground(new java.awt.Color(102, 204, 0));
         btnAccept.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +128,7 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnReject.setBackground(new java.awt.Color(255, 153, 153));
+        btnReject.setBackground(new java.awt.Color(102, 204, 0));
         btnReject.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnReject.setText("Reject");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +173,7 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 343, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -195,7 +196,7 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         panelSendToDietitian1.setBackground(new java.awt.Color(255, 255, 255));
         panelSendToDietitian1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnAssignDelivery.setBackground(new java.awt.Color(255, 153, 153));
+        btnAssignDelivery.setBackground(new java.awt.Color(102, 204, 0));
         btnAssignDelivery.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAssignDelivery.setText("Assign");
         btnAssignDelivery.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +213,7 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         jLabel7.setText("Select Home Delivery Partner:");
 
-        deliveryPicker.setBackground(new java.awt.Color(79, 173, 177));
+        deliveryPicker.setBackground(new java.awt.Color(102, 204, 0));
         deliveryPicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         deliveryPicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -252,27 +253,24 @@ public class InventoryManagerAssignDeliveryJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(320, 320, 320)
-                        .addComponent(panelSendToDietitian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                    .addComponent(panelSendToDietitian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(60, 60, 60)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(panelSendToDietitian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(548, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
