@@ -124,7 +124,8 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         enterprisePicker = new javax.swing.JComboBox();
         lblQuantityValidation = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(102, 204, 0));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
 
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -177,7 +178,7 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnPlaceOrder.setBackground(new java.awt.Color(255, 153, 153));
+        btnPlaceOrder.setBackground(new java.awt.Color(102, 204, 0));
         btnPlaceOrder.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnPlaceOrder.setText("Place Order");
         btnPlaceOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -258,7 +259,7 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel9.setFont(new java.awt.Font("Devanagari MT", 1, 36)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
         jLabel9.setText("Place Shipping Order");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -298,7 +299,7 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblProduce);
 
-        btnAddCart.setBackground(new java.awt.Color(255, 153, 153));
+        btnAddCart.setBackground(new java.awt.Color(102, 204, 0));
         btnAddCart.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAddCart.setText("Add to Cart");
         btnAddCart.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -334,7 +335,7 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         lblSelectCounty.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSelectCounty.setText("Select County:");
 
-        countyPicker.setBackground(new java.awt.Color(255, 153, 153));
+        countyPicker.setBackground(new java.awt.Color(102, 204, 0));
         countyPicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         countyPicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         countyPicker.addActionListener(new java.awt.event.ActionListener() {
@@ -347,7 +348,7 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         lblSelectEnterprise.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSelectEnterprise.setText("Select Enterprise:");
 
-        enterprisePicker.setBackground(new java.awt.Color(255, 153, 153));
+        enterprisePicker.setBackground(new java.awt.Color(102, 204, 0));
         enterprisePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         enterprisePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         enterprisePicker.addActionListener(new java.awt.event.ActionListener() {
@@ -379,18 +380,21 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Enterprises, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnAddCart, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Enterprises, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(lblQuantity)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblQuantityValidation)
-                                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(223, 223, 223)))
-                .addContainerGap())
+                                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(150, 150, 150)
+                                .addComponent(btnAddCart, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -414,7 +418,7 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
                             .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(2, 2, 2)
                         .addComponent(lblQuantityValidation)
-                        .addGap(6, 6, 6)
+                        .addGap(15, 15, 15)
                         .addComponent(btnAddCart, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -425,23 +429,23 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(84, 84, 84)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(722, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(60, 60, 60)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(491, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

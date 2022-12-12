@@ -71,7 +71,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
         btnCreate = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(102, 204, 0));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -121,7 +121,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFitnessCenter);
 
-        btnModify.setBackground(new java.awt.Color(79, 173, 177));
+        btnModify.setBackground(new java.awt.Color(102, 204, 0));
         btnModify.setFont(new java.awt.Font("Malayalam MN", 1, 14)); // NOI18N
         btnModify.setText("Modify");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +130,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(79, 173, 177));
+        btnDelete.setBackground(new java.awt.Color(102, 204, 0));
         btnDelete.setFont(new java.awt.Font("Malayalam MN", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -221,7 +221,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         lblAddressValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblAddressValidation.setText("jLabel2");
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
         btnSubmit.setFont(new java.awt.Font("Malayalam MN", 1, 14)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -230,7 +230,7 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCreate.setBackground(new java.awt.Color(79, 173, 177));
+        btnCreate.setBackground(new java.awt.Color(102, 204, 0));
         btnCreate.setFont(new java.awt.Font("Malayalam MN", 1, 14)); // NOI18N
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -296,27 +296,26 @@ public class CreateFitnessCenterHomeJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(143, 143, 143)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(915, 915, 915))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(272, 272, 272))))
+                        .addGap(643, 643, 643))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(155, 155, 155))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(60, 60, 60)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(582, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

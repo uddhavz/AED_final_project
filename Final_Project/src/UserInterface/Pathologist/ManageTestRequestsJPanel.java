@@ -112,13 +112,14 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
         lblResultValidation = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        mainPanel.setBackground(new java.awt.Color(79, 173, 177));
+        mainPanel.setBackground(new java.awt.Color(102, 204, 0));
+        mainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel1.setFont(new java.awt.Font("Devanagari MT", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
         jLabel1.setText("Manage Test Results");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -141,8 +142,8 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
         panelSendToDietitian.setBackground(new java.awt.Color(255, 255, 255));
         panelSendToDietitian.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSendResults.setBackground(new java.awt.Color(79, 173, 177));
-        btnSendResults.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSendResults.setBackground(new java.awt.Color(102, 204, 0));
+        btnSendResults.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSendResults.setText("Send Results");
         btnSendResults.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,15 +151,16 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel2.setText("Send to Dietitian");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setIconTextGap(0);
 
-        jLabel3.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         jLabel3.setText("Select Dietitian:");
 
-        dietitianPicker.setBackground(new java.awt.Color(79, 173, 177));
+        dietitianPicker.setBackground(new java.awt.Color(102, 204, 0));
+        dietitianPicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         dietitianPicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout panelSendToDietitianLayout = new javax.swing.GroupLayout(panelSendToDietitian);
@@ -195,11 +197,12 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        Enterprises.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
+        Enterprises.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         Enterprises.setText("Tests");
         Enterprises.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Enterprises.setIconTextGap(0);
 
+        tblRequests.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -221,8 +224,8 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRequests);
 
-        btnSend.setBackground(new java.awt.Color(79, 173, 177));
-        btnSend.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSend.setBackground(new java.awt.Color(102, 204, 0));
+        btnSend.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSend.setText("Send Results");
         btnSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,8 +233,8 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnPerformTest.setBackground(new java.awt.Color(79, 173, 177));
-        btnPerformTest.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnPerformTest.setBackground(new java.awt.Color(102, 204, 0));
+        btnPerformTest.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnPerformTest.setText("Perform Test");
         btnPerformTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,8 +280,8 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
         panelTestResult.setBackground(new java.awt.Color(255, 255, 255));
         panelTestResult.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
-        btnSubmit.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
+        btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.setBorderPainted(false);
@@ -288,10 +291,10 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblName1.setFont(new java.awt.Font("Devanagari MT", 0, 14)); // NOI18N
+        lblName1.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         lblName1.setText("Result:");
 
-        txtResult.setFont(new java.awt.Font("Helvetica", 0, 14)); // NOI18N
+        txtResult.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         txtResult.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtResultFocusGained(evt);
@@ -308,11 +311,11 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblResultValidation.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        lblResultValidation.setFont(new java.awt.Font("Myanmar MN", 0, 12)); // NOI18N
         lblResultValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblResultValidation.setText("jLabel2");
 
-        jLabel4.setFont(new java.awt.Font("Devanagari MT", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel4.setText("Test Result");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setIconTextGap(0);
@@ -351,7 +354,7 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
                 .addComponent(lblResultValidation, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -359,43 +362,43 @@ public class ManageTestRequestsJPanel extends javax.swing.JPanel {
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(92, 92, 92)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mainPanelLayout.createSequentialGroup()
                         .addComponent(panelSendToDietitian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(panelTestResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(60, 60, 60)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelSendToDietitian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelTestResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(101, Short.MAX_VALUE))
+                    .addComponent(panelTestResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(548, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1202, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1202, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 689, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

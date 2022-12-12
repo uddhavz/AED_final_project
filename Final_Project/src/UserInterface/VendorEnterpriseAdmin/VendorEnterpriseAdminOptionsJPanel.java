@@ -91,7 +91,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -99,7 +99,8 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnManageManager.setBackground(new java.awt.Color(79, 173, 177));
+        btnManageManager.setBackground(new java.awt.Color(102, 204, 0));
+        btnManageManager.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageManager.setText("Manage Manager");
         btnManageManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,7 +108,8 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnManageDistributionUnits.setBackground(new java.awt.Color(79, 173, 177));
+        btnManageDistributionUnits.setBackground(new java.awt.Color(102, 204, 0));
+        btnManageDistributionUnits.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageDistributionUnits.setText("Manage Vendor Units");
         btnManageDistributionUnits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +117,8 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
+        btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +130,8 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
-        btnManageHomeDeliveryPartner.setBackground(new java.awt.Color(79, 173, 177));
+        btnManageHomeDeliveryPartner.setBackground(new java.awt.Color(102, 204, 0));
+        btnManageHomeDeliveryPartner.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageHomeDeliveryPartner.setText("Manage Home Delivery Partner");
         btnManageHomeDeliveryPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +173,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageManager, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnManageHomeDeliveryPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 489, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 763, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );
@@ -202,13 +206,13 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 925, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -237,7 +241,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGap(0, 1600, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -246,7 +250,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 925, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -258,7 +262,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGap(0, 1600, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -267,7 +271,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 925, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -279,7 +283,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+            .addGap(0, 1600, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -288,7 +292,7 @@ public class VendorEnterpriseAdminOptionsJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 925, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)

@@ -80,12 +80,12 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         ActivityJPanel = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(255, 153, 153));
+        setBackground(new java.awt.Color(102, 204, 0));
 
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnCreateFitnessCenter.setBackground(new java.awt.Color(255, 153, 153));
+        btnCreateFitnessCenter.setBackground(new java.awt.Color(102, 204, 0));
         btnCreateFitnessCenter.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnCreateFitnessCenter.setText("Fitness Center");
         btnCreateFitnessCenter.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +94,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCreateDietitian.setBackground(new java.awt.Color(255, 153, 153));
+        btnCreateDietitian.setBackground(new java.awt.Color(102, 204, 0));
         btnCreateDietitian.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnCreateDietitian.setText("Dietitian");
         btnCreateDietitian.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +103,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnPathologist.setBackground(new java.awt.Color(255, 153, 153));
+        btnPathologist.setBackground(new java.awt.Color(102, 204, 0));
         btnPathologist.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnPathologist.setText(" Pathologist");
         btnPathologist.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(255, 153, 153));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
         btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +146,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(jLabel1)
-                .addContainerGap(625, Short.MAX_VALUE))
+                .addContainerGap(1093, Short.MAX_VALUE))
             .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(OptionsJPanelLayout.createSequentialGroup()
                     .addGap(126, 126, 126)
@@ -157,7 +157,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
                     .addComponent(btnPathologist, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(301, 301, 301)
                     .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(127, Short.MAX_VALUE)))
+                    .addContainerGap(595, Short.MAX_VALUE)))
         );
 
         jSplitPane1.setLeftComponent(OptionsJPanel);
@@ -170,7 +170,7 @@ public class FitnessCenterEnterpriseAdminHomeJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1105, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1588, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
