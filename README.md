@@ -11,7 +11,7 @@ The purpose of our ecosystem is to establish a network of states that connects a
 
 ## Solution:
 
-![image](https://github.com/uddhavz/AED_final_project/blob/raj/Images/BlockDiagram.png?raw=true)
+![](Images/Block%20Diagram.png)
 
 
 
