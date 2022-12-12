@@ -94,7 +94,8 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(79, 173, 177));
 
-        mainPanel.setBackground(new java.awt.Color(79, 173, 177));
+        mainPanel.setBackground(new java.awt.Color(102, 204, 0));
+        mainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -126,7 +127,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
         btnSubmit.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
         btnSubmit.setText("Add");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -167,14 +168,12 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         jLabel3.setText("Choose Network:");
 
-        statePicker.setBackground(new java.awt.Color(79, 173, 177));
         statePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         statePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
         jLabel4.setText("Choose Enterprise Type:");
 
-        enterpriseTypePicker.setBackground(new java.awt.Color(79, 173, 177));
         enterpriseTypePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         enterpriseTypePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 

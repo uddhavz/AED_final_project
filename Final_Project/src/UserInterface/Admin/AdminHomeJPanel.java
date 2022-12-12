@@ -32,22 +32,22 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
         this.system = business;
         initComponents();
         
-//        setLogo();
+        setLogo();
 //        setBackground();
     }
 
-//    private void setLogo() {
-//        Image image = null;
-//        try {
-//            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
-//        Image scaledImg = image.getScaledInstance(120, 200, Image.SCALE_SMOOTH);
-//        ImageIcon icon = new ImageIcon(scaledImg);
-//        imgLogo.setIcon(icon);
-//    }
+    private void setLogo() {
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UI/logo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
+    }
     
 //    private void setBackground() {
 //        
@@ -85,7 +85,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setDividerLocation(250);
@@ -94,7 +94,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnManageNetwork.setBackground(new java.awt.Color(0, 153, 0));
+        btnManageNetwork.setBackground(new java.awt.Color(102, 204, 0));
         btnManageNetwork.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageNetwork.setText("Manage State");
         btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +103,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnManageEnterprise.setBackground(new java.awt.Color(0, 153, 0));
+        btnManageEnterprise.setBackground(new java.awt.Color(102, 204, 0));
         btnManageEnterprise.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageEnterprise.setText("Manage Enterprise");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +124,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
         imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
-        btnManageEnterpriseAdmins.setBackground(new java.awt.Color(0, 153, 0));
+        btnManageEnterpriseAdmins.setBackground(new java.awt.Color(102, 204, 0));
         btnManageEnterpriseAdmins.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageEnterpriseAdmins.setText("Manage Enterprise Admins");
         btnManageEnterpriseAdmins.addActionListener(new java.awt.event.ActionListener() {
@@ -141,31 +141,31 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
                 .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnManageNetwork, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnManageEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(OptionsJPanelLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(OptionsJPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnManageEnterpriseAdmins, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnManageNetwork, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageEnterpriseAdmins, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))))
                 .addContainerGap())
+            .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         OptionsJPanelLayout.setVerticalGroup(
             OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OptionsJPanelLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnManageNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnManageEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnManageEnterpriseAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 379, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 345, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(180, 180, 180))
         );

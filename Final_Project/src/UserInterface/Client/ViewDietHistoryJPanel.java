@@ -189,7 +189,8 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         jLabel62 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
 
-        mainPanel.setBackground(new java.awt.Color(79, 173, 177));
+        mainPanel.setBackground(new java.awt.Color(102, 204, 0));
+        mainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -206,7 +207,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(500, 500, 500)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(409, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,7 +220,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnVIewResult.setBackground(new java.awt.Color(79, 173, 177));
+        btnVIewResult.setBackground(new java.awt.Color(102, 204, 0));
         btnVIewResult.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnVIewResult.setText("View Diet");
         btnVIewResult.addActionListener(new java.awt.event.ActionListener() {
@@ -254,7 +255,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
             tblRequest.getColumnModel().getColumn(0).setMaxWidth(0);
         }
 
-        btnDownloadResult.setBackground(new java.awt.Color(79, 173, 177));
+        btnDownloadResult.setBackground(new java.awt.Color(102, 204, 0));
         btnDownloadResult.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnDownloadResult.setText("Download");
         btnDownloadResult.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +275,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnVIewResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnDownloadResult, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,7 +290,8 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        HighSugarJPanel.setBackground(new java.awt.Color(255, 153, 153));
+        HighSugarJPanel.setBackground(new java.awt.Color(51, 102, 0));
+        HighSugarJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -340,12 +342,8 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel8))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6))
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel6)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -527,7 +525,8 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        weightLossJPanel.setBackground(new java.awt.Color(255, 153, 153));
+        weightLossJPanel.setBackground(new java.awt.Color(51, 102, 0));
+        weightLossJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -753,7 +752,8 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        IronDeficiencyJPanel.setBackground(new java.awt.Color(255, 153, 153));
+        IronDeficiencyJPanel.setBackground(new java.awt.Color(51, 102, 0));
+        IronDeficiencyJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -908,23 +908,17 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         jPanel21Layout.setHorizontalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)))
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel46)
-                            .addComponent(jLabel48))
+                            .addComponent(jLabel48)
+                            .addComponent(lblDinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblDinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -982,7 +976,8 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        weightGainJPanel.setBackground(new java.awt.Color(255, 153, 153));
+        weightGainJPanel.setBackground(new java.awt.Color(51, 102, 0));
+        weightGainJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jPanel23.setBackground(new java.awt.Color(255, 255, 255));
         jPanel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1226,11 +1221,11 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1128, Short.MAX_VALUE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(HighSugarJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1239,12 +1234,12 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                         .addComponent(IronDeficiencyJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(weightGainJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(24, 24, 24)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1256,7 +1251,7 @@ public class ViewDietHistoryJPanel extends javax.swing.JPanel {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(IronDeficiencyJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(weightGainJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(393, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -1467,8 +1462,6 @@ int selectedRow = tblRequest.getSelectedRow();
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -1505,10 +1498,6 @@ int selectedRow = tblRequest.getSelectedRow();
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;

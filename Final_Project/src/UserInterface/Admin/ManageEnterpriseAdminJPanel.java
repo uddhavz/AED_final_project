@@ -121,7 +121,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(79, 173, 177));
 
-        mainPanel.setBackground(new java.awt.Color(79, 173, 177));
+        mainPanel.setBackground(new java.awt.Color(102, 204, 0));
+        mainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -153,7 +154,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
         btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Add");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -187,7 +188,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Choose State:");
 
-        statePicker.setBackground(new java.awt.Color(79, 173, 177));
         statePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         statePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         statePicker.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +200,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Choose Enterprise: ");
 
-        enterprisePicker.setBackground(new java.awt.Color(79, 173, 177));
         enterprisePicker.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         enterprisePicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 

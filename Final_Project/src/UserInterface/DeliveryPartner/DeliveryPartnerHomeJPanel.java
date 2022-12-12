@@ -91,6 +91,7 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         OptionsJPanel = new javax.swing.JPanel();
         btnManageNetwork = new javax.swing.JButton();
@@ -100,12 +101,15 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 153, 153));
 
+        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0)));
+
         jSplitPane1.setDividerLocation(250);
 
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnManageNetwork.setBackground(new java.awt.Color(255, 153, 153));
+        btnManageNetwork.setBackground(new java.awt.Color(102, 204, 0));
         btnManageNetwork.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageNetwork.setText("Orders");
         btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +118,7 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(255, 153, 153));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
         btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -156,15 +160,40 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setRightComponent(ActivityJPanel);
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1612, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1212, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jSplitPane1)
+                    .addContainerGap()))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -192,6 +221,7 @@ public class DeliveryPartnerHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel bgImage;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnManageNetwork;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }

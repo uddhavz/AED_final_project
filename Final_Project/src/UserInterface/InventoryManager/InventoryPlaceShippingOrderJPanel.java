@@ -476,9 +476,9 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         for (int i=0; i<noOfRows; i++) {
             Produce produce = (Produce) model.getValueAt(i, 0);
             Integer quant = (Integer) model.getValueAt(i, 1);
-            System.out.println(produce.getProdName());
             produce.setQuantity(produce.getQuantity() - quant);
             order.addItem(produce, quant);
+            System.out.println("*Order --->" + order  );
         }
         order.setPrice(Double.parseDouble(txtTotalPrice.getText()));
 
@@ -489,6 +489,9 @@ public class InventoryPlaceShippingOrderJPanel extends javax.swing.JPanel {
         request.setStatus("Order placed");
         request.setOrders(order);
         request.setVendor(vendor);
+        
+        System.out.println("---------------------------------------");
+        System.out.println("request -------> "+ request);
 
         manufacturingCounty.addOrder(order);
         CallDialog calldialog = new CallDialog(mainPanel, "Order placed successfully", true);

@@ -65,7 +65,8 @@ public class ManageStateJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(79, 173, 177));
         setPreferredSize(new java.awt.Dimension(1440, 925));
 
-        mainPanel.setBackground(new java.awt.Color(79, 173, 177));
+        mainPanel.setBackground(new java.awt.Color(102, 204, 0));
+        mainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         mainPanel.setPreferredSize(new java.awt.Dimension(997, 800));
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -99,7 +100,7 @@ public class ManageStateJPanel extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
         btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Add");
         btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

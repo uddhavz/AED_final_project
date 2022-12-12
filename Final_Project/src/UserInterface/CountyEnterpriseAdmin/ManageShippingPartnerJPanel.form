@@ -16,7 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="1628" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="1638" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="676" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="1200" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -45,7 +45,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="1628" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="1638" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -57,7 +57,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="676" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="1200" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -79,9 +79,9 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1417" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1638" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Component id="jPanel3" alignment="1" pref="1628" max="32767" attributes="0"/>
+                      <Component id="jPanel3" alignment="1" pref="1638" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -89,7 +89,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <EmptySpace min="0" pref="790" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Component id="jPanel3" alignment="0" pref="790" max="32767" attributes="0"/>
+                      <Component id="jPanel3" alignment="0" pref="1200" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -98,7 +98,15 @@
             <Container class="javax.swing.JPanel" name="jPanel3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="b1" green="ad" red="4f" type="rgb"/>
+                  <Color blue="0" green="cc" red="66" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder thickness="5"/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[1350, 1200]"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[997, 800]"/>
@@ -111,8 +119,8 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jPanel4" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="1" attributes="0">
@@ -120,20 +128,20 @@
                                   <Component id="jPanel5" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="457" max="-2" attributes="0"/>
+                          <EmptySpace pref="266" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="188" max="32767" attributes="0"/>
+                          <EmptySpace pref="490" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -212,7 +220,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="56" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="btnModify" min="-2" pref="40" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               <Component id="btnDelete" min="-2" pref="40" max="-2" attributes="0"/>
@@ -230,10 +238,10 @@
                     <Component class="javax.swing.JButton" name="btnModify">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="b1" green="ad" red="4f" type="rgb"/>
+                          <Color blue="0" green="cc" red="66" type="rgb"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Devanagari MT" size="14" style="1"/>
+                          <Font name="Myanmar MN" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Modify"/>
                       </Properties>
@@ -244,10 +252,10 @@
                     <Component class="javax.swing.JButton" name="btnDelete">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="b1" green="ad" red="4f" type="rgb"/>
+                          <Color blue="0" green="cc" red="66" type="rgb"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Devanagari MT" size="14" style="1"/>
+                          <Font name="Myanmar MN" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Delete"/>
                       </Properties>
@@ -402,9 +410,6 @@
                     </Component>
                     <Component class="javax.swing.JComboBox" name="CountyPicker">
                       <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="b1" green="ad" red="4f" type="rgb"/>
-                        </Property>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="4">
                             <StringItem index="0" value="Item 1"/>
@@ -508,10 +513,10 @@
                     <Component class="javax.swing.JButton" name="btnSubmit">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="b1" green="ad" red="4f" type="rgb"/>
+                          <Color blue="0" green="cc" red="66" type="rgb"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Devanagari MT" size="14" style="1"/>
+                          <Font name="Myanmar MN" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Submit"/>
                       </Properties>

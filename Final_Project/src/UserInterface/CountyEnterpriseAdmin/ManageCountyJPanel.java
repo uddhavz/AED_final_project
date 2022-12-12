@@ -76,7 +76,8 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
 
         mainPanel.setBackground(new java.awt.Color(79, 173, 177));
 
-        jPanel2.setBackground(new java.awt.Color(79, 173, 177));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel2.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -105,8 +106,8 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnModify.setBackground(new java.awt.Color(79, 173, 177));
-        btnModify.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnModify.setBackground(new java.awt.Color(102, 204, 0));
+        btnModify.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnModify.setText("Modify");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,8 +115,8 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(79, 173, 177));
-        btnDelete.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnDelete.setBackground(new java.awt.Color(102, 204, 0));
+        btnDelete.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,8 +205,8 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel2.setIconTextGap(0);
 
-        btnAdd.setBackground(new java.awt.Color(79, 173, 177));
-        btnAdd.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnAdd.setBackground(new java.awt.Color(102, 204, 0));
+        btnAdd.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,8 +214,8 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSubmit.setBackground(new java.awt.Color(79, 173, 177));
-        btnSubmit.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSubmit.setBackground(new java.awt.Color(102, 204, 0));
+        btnSubmit.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,45 +269,45 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(78, 78, 78)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(249, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(32, 32, 32)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(605, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1205, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1205, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1205, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -315,7 +316,7 @@ public class ManageCountyJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

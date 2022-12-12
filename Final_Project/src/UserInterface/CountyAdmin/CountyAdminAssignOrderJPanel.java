@@ -95,7 +95,8 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
 
         mainPanel.setBackground(new java.awt.Color(79, 173, 177));
 
-        jPanel14.setBackground(new java.awt.Color(153, 204, 0));
+        jPanel14.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel14.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
@@ -112,7 +113,7 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(450, 450, 450)
                 .addComponent(jLabel5)
-                .addContainerGap(500, Short.MAX_VALUE))
+                .addContainerGap(511, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,8 +126,8 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnAccept.setBackground(new java.awt.Color(153, 204, 0));
-        btnAccept.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnAccept.setBackground(new java.awt.Color(102, 204, 0));
+        btnAccept.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,8 +135,8 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnReject.setBackground(new java.awt.Color(153, 204, 0));
-        btnReject.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnReject.setBackground(new java.awt.Color(102, 204, 0));
+        btnReject.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnReject.setText("Reject");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +144,7 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        tblOrders.setBackground(new java.awt.Color(153, 204, 0));
+        tblOrders.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -203,8 +204,8 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel6.setIconTextGap(0);
 
-        btnAssign.setBackground(new java.awt.Color(153, 204, 0));
-        btnAssign.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnAssign.setBackground(new java.awt.Color(102, 204, 0));
+        btnAssign.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnAssign.setText("Assign Shipping Partner");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +213,6 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        shippingPartnerPicker.setBackground(new java.awt.Color(153, 204, 0));
         shippingPartnerPicker.setFont(new java.awt.Font("Devanagari MT", 0, 13)); // NOI18N
         shippingPartnerPicker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         shippingPartnerPicker.addActionListener(new java.awt.event.ActionListener() {
@@ -258,45 +258,47 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(82, 82, 82)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(318, 318, 318)
+                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(46, 46, 46)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(38, 38, 38)
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(594, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1191, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1191, Short.MAX_VALUE))
+                .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE))
+                .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1191, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -305,7 +307,7 @@ public class CountyAdminAssignOrderJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

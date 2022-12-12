@@ -50,7 +50,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -58,7 +58,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnShoppingCart.setBackground(new java.awt.Color(79, 173, 177));
+        btnShoppingCart.setBackground(new java.awt.Color(102, 204, 0));
         btnShoppingCart.setText("Shopping");
         btnShoppingCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +66,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +78,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
         imgLogo.setMaximumSize(new java.awt.Dimension(60, 60));
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
-        btnMeetDietitian.setBackground(new java.awt.Color(79, 173, 177));
+        btnMeetDietitian.setBackground(new java.awt.Color(102, 204, 0));
         btnMeetDietitian.setText("Consult Center");
         btnMeetDietitian.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +86,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnViewDiet.setBackground(new java.awt.Color(79, 173, 177));
+        btnViewDiet.setBackground(new java.awt.Color(102, 204, 0));
         btnViewDiet.setText("View Diet");
         btnViewDiet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +94,7 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnViewOrders.setBackground(new java.awt.Color(79, 173, 177));
+        btnViewOrders.setBackground(new java.awt.Color(102, 204, 0));
         btnViewOrders.setText("View Orders");
         btnViewOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,8 +120,11 @@ public class ClientHomeJPanel extends javax.swing.JPanel {
                         .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnMeetDietitian, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnViewDiet, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
-                    .addComponent(btnViewOrders, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
-                    .addComponent(btnShoppingCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(OptionsJPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(OptionsJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnShoppingCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnViewOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         OptionsJPanelLayout.setVerticalGroup(

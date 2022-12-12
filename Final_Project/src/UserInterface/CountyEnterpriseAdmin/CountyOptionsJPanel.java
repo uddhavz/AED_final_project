@@ -92,7 +92,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1440, 925));
         setRequestFocusEnabled(false);
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -101,6 +101,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
         btnManageCounty.setBackground(new java.awt.Color(153, 204, 0));
+        btnManageCounty.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageCounty.setText("Manage County");
         btnManageCounty.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +110,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         });
 
         btnManageCountyAdmin.setBackground(new java.awt.Color(153, 204, 0));
+        btnManageCountyAdmin.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageCountyAdmin.setText("Manage Farmers");
         btnManageCountyAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +119,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         });
 
         btnLogout.setBackground(new java.awt.Color(153, 204, 0));
+        btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +132,7 @@ public class CountyOptionsJPanel extends javax.swing.JPanel {
         imgLogo.setMinimumSize(new java.awt.Dimension(60, 60));
 
         btnManageShippingPartner.setBackground(new java.awt.Color(153, 204, 0));
+        btnManageShippingPartner.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnManageShippingPartner.setText("Manage Shipping Partner");
         btnManageShippingPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

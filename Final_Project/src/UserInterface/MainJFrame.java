@@ -74,6 +74,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         
+        setLogo();
         setBackground();
     }
 
@@ -127,7 +128,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Username:");
 
-        btnLogin.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogin.setBackground(new java.awt.Color(102, 204, 0));
         btnLogin.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +162,7 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -176,9 +177,9 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGap(183, 183, 183)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30)
+                        .addGap(41, 41, 41)
+                        .addComponent(imgLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -222,6 +223,8 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
+
+        bgImage.setForeground(new java.awt.Color(102, 204, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -551,9 +554,22 @@ public class MainJFrame extends javax.swing.JFrame {
             Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Image scaledImg = image.getScaledInstance(1450, 960, Image.SCALE_SMOOTH);
+        Image scaledImg = image.getScaledInstance(1600, 1200, Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(scaledImg);
         System.out.println(icon);
         bgImage.setIcon(icon);
+    }
+    
+    private void setLogo() {
+        Image image = null;
+        try {
+            image = ImageIO.read(getClass().getResource("/UserInterface/FitnessIcon.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Image scaledImg = image.getScaledInstance(150,150, Image.SCALE_SMOOTH);
+        ImageIcon icon = new ImageIcon(scaledImg);
+        imgLogo.setIcon(icon);
     }
 }
