@@ -11,7 +11,7 @@ The purpose of our ecosystem is to establish a network of states that connects a
 
 ## Solution:
 
-![](Images/Block%20Diagram.png)
+![](Final_Project/Images/Block%20Diagram.png)
 
 
 
