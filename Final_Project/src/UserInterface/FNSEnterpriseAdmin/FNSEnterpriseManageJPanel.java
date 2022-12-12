@@ -65,7 +65,7 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
         ActivityJPanel = new javax.swing.JPanel();
         bgImage = new javax.swing.JLabel();
 
-        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 173, 177), 5));
+        jPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 0), 5));
         jPanel.setPreferredSize(new java.awt.Dimension(1440, 800));
 
         jSplitPane.setPreferredSize(new java.awt.Dimension(1153, 800));
@@ -73,7 +73,8 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
         OptionsJPanel.setBackground(new java.awt.Color(0, 0, 0));
         OptionsJPanel.setPreferredSize(new java.awt.Dimension(250, 925));
 
-        btnFNSUnit.setBackground(new java.awt.Color(79, 173, 177));
+        btnFNSUnit.setBackground(new java.awt.Color(102, 204, 0));
+        btnFNSUnit.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnFNSUnit.setText("FNS Unit");
         btnFNSUnit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +82,8 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnFNSAdmin.setBackground(new java.awt.Color(79, 173, 177));
+        btnFNSAdmin.setBackground(new java.awt.Color(102, 204, 0));
+        btnFNSAdmin.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnFNSAdmin.setText("FNS Admin");
         btnFNSAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +91,8 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnLogout.setBackground(new java.awt.Color(79, 173, 177));
+        btnLogout.setBackground(new java.awt.Color(102, 204, 0));
+        btnLogout.setFont(new java.awt.Font("Myanmar MN", 0, 13)); // NOI18N
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,9 +131,9 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
                 .addComponent(btnFNSUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnFNSAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 700, Short.MAX_VALUE)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(180, 180, 180))
+                .addGap(293, 293, 293))
         );
 
         jSplitPane.setLeftComponent(OptionsJPanel);
@@ -146,13 +149,13 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
         jPanel.setLayout(jPanelLayout);
         jPanelLayout.setHorizontalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1590, Short.MAX_VALUE)
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1190, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -161,13 +164,13 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1600, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -175,13 +178,13 @@ public class FNSEnterpriseManageJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1600, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 392, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );

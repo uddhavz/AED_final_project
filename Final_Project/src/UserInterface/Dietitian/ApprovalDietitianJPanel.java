@@ -63,7 +63,8 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
 
         mainPanel.setBackground(new java.awt.Color(79, 173, 177));
 
-        jPanel10.setBackground(new java.awt.Color(79, 173, 177));
+        jPanel10.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel10.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
@@ -124,7 +125,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
             tblTestResult.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        btnApproveTest.setBackground(new java.awt.Color(79, 173, 177));
+        btnApproveTest.setBackground(new java.awt.Color(102, 204, 0));
         btnApproveTest.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnApproveTest.setText("Give Diet");
         btnApproveTest.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -145,9 +146,9 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
                     .addComponent(Enterprises, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(26, 26, 26)
                         .addComponent(btnApproveTest, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 378, Short.MAX_VALUE)))
+                        .addGap(0, 399, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
@@ -165,7 +166,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         panelProcessOrder.setBackground(new java.awt.Color(255, 255, 255));
         panelProcessOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        btnSubmit2.setBackground(new java.awt.Color(79, 173, 177));
+        btnSubmit2.setBackground(new java.awt.Color(102, 204, 0));
         btnSubmit2.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSubmit2.setText("Submit");
         btnSubmit2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -228,45 +229,47 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(70, 70, 70)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(266, 266, 266)
+                        .addComponent(panelProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(43, 43, 43)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(41, 41, 41)
                 .addComponent(panelProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(313, Short.MAX_VALUE))
+                .addContainerGap(622, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1417, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1417, Short.MAX_VALUE))
+                .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE))
+                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1417, Short.MAX_VALUE)
+            .addGap(0, 1350, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -275,7 +278,7 @@ public class ApprovalDietitianJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, 0)

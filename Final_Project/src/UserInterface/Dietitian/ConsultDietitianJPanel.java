@@ -97,7 +97,8 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(79, 173, 177));
 
-        jPanel3.setBackground(new java.awt.Color(51, 153, 0));
+        jPanel3.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel3.setPreferredSize(new java.awt.Dimension(997, 800));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -113,7 +114,7 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(450, 450, 450)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,8 +153,8 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             tblClientStatus.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        btnViewIssues.setBackground(new java.awt.Color(79, 173, 177));
-        btnViewIssues.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnViewIssues.setBackground(new java.awt.Color(102, 204, 0));
+        btnViewIssues.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnViewIssues.setText("View Case");
         btnViewIssues.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnViewIssues.setBorderPainted(false);
@@ -219,8 +220,8 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             tblIssues.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        btnSuggestTest.setBackground(new java.awt.Color(79, 173, 177));
-        btnSuggestTest.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSuggestTest.setBackground(new java.awt.Color(102, 204, 0));
+        btnSuggestTest.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSuggestTest.setText("Request Test");
         btnSuggestTest.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSuggestTest.setBorderPainted(false);
@@ -296,8 +297,8 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
         lblRemarksValidation.setForeground(new java.awt.Color(255, 0, 51));
         lblRemarksValidation.setText("jLabel2");
 
-        btnSendForTesting.setBackground(new java.awt.Color(79, 173, 177));
-        btnSendForTesting.setFont(new java.awt.Font("Devanagari MT", 1, 14)); // NOI18N
+        btnSendForTesting.setBackground(new java.awt.Color(102, 204, 0));
+        btnSendForTesting.setFont(new java.awt.Font("Myanmar MN", 1, 14)); // NOI18N
         btnSendForTesting.setText("Send For Testing");
         btnSendForTesting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,7 +306,6 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
             }
         });
 
-        labPathologist.setBackground(new java.awt.Color(79, 173, 177));
         labPathologist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setFont(new java.awt.Font("Myanmar MN", 0, 14)); // NOI18N
@@ -381,7 +381,7 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(124, 124, 124)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,20 +389,20 @@ public class ConsultDietitianJPanel extends javax.swing.JPanel {
                         .addComponent(panelProcessOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 625, Short.MAX_VALUE))
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(602, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(52, 52, 52)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelProcessOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(645, Short.MAX_VALUE))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(589, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
