@@ -26,7 +26,9 @@ The purpose of our ecosystem is to establish a network of states that connects a
 
  ## Screenshots:
 
-
+![](Final_Project/Images/HomePage.png)
+![](Final_Project/Images/Client%20Homepage.png)
+![](Final_Project/Images/Client%20Diet.png)
 
 ## A Project by
 - [Uddhav Zambare](https://github.com/uddhavz)
